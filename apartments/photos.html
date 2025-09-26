@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="photos.css">
+    <title>Carousel</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="hiddenMenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="amenities.html">Amenities</a></li>
+                <li><a href="floorPlans.html">Floor Plan</a></li>
+                <li><a href="photos.html">Photos</a></li>
+            </ul>
+        </div>
+            <section>
+                    <nav>
+                        <div class="logo" onclick="menuToggle()"> 
+                            <i class="fas fa-bars"></i><span>Eagle</span><span>Ridge</span>
+                        </div>
+                    </nav>
+            </section>
+      <div class="slider">
+            <div
+            class="slide active"
+            style="
+            background-image: url('https://images.unsplash.com/photo-1493809842364-78817add7ffb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+            "
+        ></div>
+        <div
+            class="slide"
+            style="
+            background-image: url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+            "
+        ></div>
+
+        <div
+            class="slide"
+            style="
+            background-image: url('https://images.unsplash.com/photo-1556784344-ad913c73cfc4?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869');
+            "
+        ></div>
+
+        <div
+            class="slide"
+            style="
+            background-image: url('https://images.unsplash.com/photo-1571116597236-b8a3ebe15f59?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=530');
+            "
+        ></div>
+
+        <div
+            class="slide"
+            style="
+            background-image: url('https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=968&q=80');
+            "
+        ></div>
+        <div
+        class="slide"
+        style="
+            background-image: url('https://images.unsplash.com/photo-1623920996377-9c5cd536143e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80');
+        "
+        ></div>
+        <div
+        class="slide"
+        style="
+            background-image: url('https://images.unsplash.com/photo-1596204976717-1a9ff47f74ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+        "
+        ></div>
+
+        <div
+        class="slide"
+        style="
+            background-image: url('https://images.unsplash.com/photo-1433849665221-d2f93042ae54?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80');
+        "
+        ></div>
+
+        <div
+        class="slide"
+        style="
+            background-image: url('https://images.unsplash.com/photo-1607816420124-038873dbd26b?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870');
+        "
+        ></div>
+
+        <div
+        class="slide"
+        style="
+            background-image: url('https://images.unsplash.com/photo-1600447653990-02fbebf8dd24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGFwYXJ0bWVudCUyMHJvb218ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60');
+        "
+        ></div>
+
+        <div
+        class="slide"
+        style="
+            background-image: url('https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870');
+        "
+        ></div>
+
+        <div
+        class="slide"
+        style="
+            background-image: url('https://images.unsplash.com/photo-1560448075-cbc16bb4af8e?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870');
+        "
+        ></div>
+     </div>
+  </div>
+
+    <div class="prevBtn">
+        <i class="fas fa-chevron-left"></i>
+    </div>
+
+    <div class="nextBtn">
+        <i class="fas fa-chevron-right"></i>
+    </div>
+
+
+
+    <script src="photos.js"></script>
+</body>
+</html>
