@@ -32,28 +32,29 @@ section.show {
 
 .menu {
     display: flex;
+    justify-content: center;
+    align-items: center;
     margin-left: 46.875em;
 }
 
 .menu li {
-    font-size: 1.25rem;
+    font-size: 1rem; 
     font-weight: bolder;
-    margin: 1.875em 0em 1.875em 4.25em;
+    margin: 1.875em 0em 1.875em 6.25em;
     text-transform: uppercase;
     z-index: 50;
     cursor: pointer;
-    text-shadow: 1.5px .5px #08153a;
 }
 
 .menu li a {
-    color: #fff;
-    letter-spacing: 5px; 
+    color: #182856;
+    text-shadow: 2px 2px #fff;
 }
 
 .menu li a:hover {
     opacity: 0.5;
     transition: opacity 0.3s;
-} 
+}
 
 .hiddenMenu {
     position: fixed;
@@ -73,6 +74,7 @@ section.show {
     opacity: 1;
     transition: all 2s;
 }
+
 
 .hiddenMenu ul li {
    text-align: center;
@@ -100,13 +102,14 @@ section.show {
     background-color: cornflowerblue;
     color: #fff;
     padding: .5em .6em;
-    z-index: 100;
+    z-index: 200;
     cursor: pointer;
 }
 
 .logo i {
     margin-right: .1em;
 }
+
 
 .slider {
     position: absolute;
@@ -115,6 +118,7 @@ section.show {
     width: 100%;
     height: 650px;
 }
+
 
 .slider img {
     width: 100%;
@@ -125,20 +129,19 @@ section.show {
     font-family: 'Vollkorn', sans-serif;
     transform: translateX(-3rem);
     color: #fff;
-   /* text-shadow: 4px 0 0 cornflowerblue, 0 -2px 0 cornflowerblue, 0 2px 0 cornflowerblue, -2px 0 0 cornflowerblue; */
-    text-shadow: 2px 2px rgb(3, 72, 99);
+    text-shadow: 4px 0 0 cornflowerblue, 0 -2px 0 cornflowerblue, 0 2px 0 cornflowerblue, -2px 0 0 cornflowerblue;
     font-size: 5rem;
     font-weight: bolder;
     position: absolute;
     top: 28%;
-    left: 26%;
+    left: 22%;
     text-align: center;
 }
 
 .slider .btn {
     position: absolute;
     top: 55%;
-    left: 38%;
+    left: 35%;
     background-color: #182856;
     color: #fff;
     padding: .938em 2.375em;
@@ -191,6 +194,7 @@ section.show {
    margin: 36.25em 1.25em 5.625em;
 }
 
+
 .welcome h2 {
     font-size: 3rem;
     color: #182856;
@@ -216,49 +220,48 @@ section.show {
     border-right: 3px solid darkblue;
 }
 
-.slideshowContainer {
+   .slideshowContainer {
     position: relative;
  } 
 
   .pics {
-    display: flex;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+   display: flex;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
  }
  
+ 
  .pic {
+     overflow: hidden;
      width: 350px;
      height: 700px;
      position: relative;
-     animation: FadeInOut 17s ease-in-out infinite; 
+     animation: FadeInOut 17s ease-in-out infinite;
  }
 
- .pic::before {
+ .pic:before {
     background: rgba(15,25,30,0.5);
     content: " ";
+    display: block;
     left: 0;
     top: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-.picP::before {
-    background: rgba(15,25,30,0.5);
-    content: " ";
-    left: 0;
-    top: 0;
+    overflow: hidden;
     position: absolute;
     width: 100%;
     height: 100%;
 }
 
  .picP {
+    overflow: hidden;
+    width: 350px;
+    height: 700px;
+    position: relative;
     animation: fadeIn 17s ease-in-out infinite;
-} 
+}
+
 
  .pic:nth-child(1) {
      animation-delay: .5s;
@@ -310,105 +313,96 @@ section.show {
      content: ' ';
      display: none;
  }
- /*
- .picP:hover::after {
-     content: ' ';
-     display: none;
- } */
  
    .pic:hover .picContent {
          transform: translateY(-200px);
          transition: transform 1s;
      }
- /*
-   .picP:hover .picContent {
-        transform: translateY(-200px);
-        transition: transform 1s;
-   } */
+ 
  
  .picOne {
-    background: url('https://images1.apartments.com/i2/E3Q70qlSWRDoeSYsKAPRbgfGI8fX1NhPkqWJH2UlXwQ/113/43822-jenkins-ln-ashburn-va-building-photo.jpg?p=1');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+     background: url('https://images1.apartments.com/i2/E3Q70qlSWRDoeSYsKAPRbgfGI8fX1NhPkqWJH2UlXwQ/113/43822-jenkins-ln-ashburn-va-building-photo.jpg?p=1');
+     background-position: center center;
+     background-repeat: no-repeat;
+     background-size: cover;
  }
  
  .picTwo {
-    background: url('dog_grass.jpg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+     background: url('dog_grass.jpg');
+     background-position: center center;
+     background-repeat: no-repeat;
+     background-size: cover;
  }
  
  .picThree {
-    background: url('pool.jpg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+     background: url('pool.jpg');
+     background-position: center center;
+     background-repeat: no-repeat;
+     background-size: cover;
  }
  
  .picFour {
-    background: url('https://plus.unsplash.com/premium_photo-1668767725778-d2976987b7cb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHNwb3J0cyUyMGNlbnRlcnxlbnwwfDF8MHx8fDA%3D');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+     background: url('https://plus.unsplash.com/premium_photo-1668767725778-d2976987b7cb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHNwb3J0cyUyMGNlbnRlcnxlbnwwfDF8MHx8fDA%3D');
+     background-position: right center;
+     background-repeat: no-repeat;
+     background-size: cover;
  }
  
  .picFive {
-    background: url('https://cdn.pixabay.com/photo/2023/09/25/15/06/living-room-8275327_960_720.jpg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background: url('https://cdn.pixabay.com/photo/2023/09/25/15/06/living-room-8275327_960_720.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .picSix {
-    background: url('https://images.unsplash.com/photo-1552053831-71594a27632d?q=80&w=1562&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}  
+  background: url('https://images.unsplash.com/photo-1552053831-71594a27632d?q=80&w=1562&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .picSeven {
-    background: url('https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1028397/Saddle%20Ridge%20Apartments-POI-007.jpg?crop=(0,0,300,200)&cropxunits=300&cropyunits=200&quality=85&width=956&height=637&mode=max');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background: url('https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1028397/Saddle%20Ridge%20Apartments-POI-007.jpg?crop=(0,0,300,200)&cropxunits=300&cropyunits=200&quality=85&width=956&height=637&mode=max');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .picEight {
-    background: url('https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1028397/Saddle%20Ridge%20Apartments-POI-003(4).JPG?crop=(0,0,300,200)&cropxunits=300&cropyunits=200&quality=85&width=956&height=637&mode=max');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background: url('https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1028397/Saddle%20Ridge%20Apartments-POI-003(4).JPG?crop=(0,0,300,200)&cropxunits=300&cropyunits=200&quality=85&width=956&height=637&mode=max');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
  
 .picNine {
-    background: url('https://images.unsplash.com/photo-1510771463146-e89e6e86560e?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=327');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background: url('https://images.unsplash.com/photo-1510771463146-e89e6e86560e?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=327');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .picTen {
-    background: url('https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background: url('https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .picEleven {
-    background: url('https://images.unsplash.com/photo-1590634332992-b8b4a4b7ae47?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=502&q=80');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
- }
+  background: url('https://images.unsplash.com/photo-1590634332992-b8b4a4b7ae47?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=502&q=80');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .picTwelve {
-    background: url('https://images.unsplash.com/photo-1586671267731-da2cf3ceeb80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=389&q=80');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background: url('https://images.unsplash.com/photo-1586671267731-da2cf3ceeb80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=389&q=80');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .fadeIn {
@@ -422,33 +416,33 @@ section.show {
 }
 
 @keyframes FadeInOut {
-    0% {
-     opacity: 1;
+  0% {
+  opacity:1;
     }
     45% {
-     opacity: 1;
+    opacity:1;
     }
     55% {
-     opacity: 0;
+    opacity:0;
     }
     100% {
-     opacity: 0;
+    opacity:0;
     }
 }
 
 @keyframes fadeIn {
-    0% {
-     opacity: 0;
-    }
-    45% {
-     opacity: 0;
-    }
-    55% {
-     opacity: 1;
-    }
-    100% {
-     opacity: 1;
-    }
+  0% {
+  opacity:0;
+  }
+  45% {
+  opacity:0;
+  }
+  55% {
+  opacity:1;
+  }
+  100% {
+  opacity:1;
+  }
   }
 
 .submit {
@@ -468,6 +462,7 @@ input {
  input:focus {
     outline: none;
 }
+
 
 .timeless {
     position: relative;
@@ -908,3 +903,4 @@ input {
 }
 */
 
+/* Do I need to change the font size for responsiveness? */

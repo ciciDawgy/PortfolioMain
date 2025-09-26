@@ -1,133 +1,329 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-* {
-	box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+:root {
+    --primary: #ff4545;
+    --white: #fff;
+    --black: #000;
+    --grey1: #3a3b3c;
+    --grey2: #828282;
+    --blue: #007bff;
 }
 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection{
+  color: var(--white);
+  background: var(--blue);
+}
+
+
 body {
-	background-color: #f7f7f7;
+  background-color: #000;
+  color: var(--black);
+  font-weight: 400;
+}
+
+.container {
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.shop {
+  background-color: #000;
+  color: #fff;
+  border-radius: 8px;
+  padding: 5px 15px;
+}
+
+.shop:hover {
+  opacity: 0.75;
+}
+
+#shopOne {
+  position: absolute;
+  top: 103%;
+  left: 44%;
+  cursor: pointer;
+}
+
+#shopTwo {
+  position: absolute;
+  top: 100%;
+  left: 45%;
+  cursor: pointer;
+}
+
+.big {
+  font-size: 45px;
+  background-color: blueviolet;
+}
+
+img {
+  width: 100%;
+}
+
+.logo {
+  text-transform: uppercase;
+  border: 3px solid var(--black);
+  color: var(--primary);
+  font-size: 28px;
+  font-weight: bold;
+  padding: 3px;
+  margin-left: 30px;
+  margin-right: 600px;
 }
 
 ul {
-    background-color: #000;
-    color: #fff;
-    width: 100%;
-    height: 40px;
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
+  position: absolute;
+  top: 10px;
+  left: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
 }
 
-ul li {
-    margin: 10px 20px;
-    list-style: none;
-    transition: color 1s;
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
+
+.container {
+  margin-bottom: 450px;
+}
+
+li {
+  list-style: none;
+  font-size: 30px;
+  margin: 8px 20px;
+}
+
+li a {
+  color: #fff;
+  text-decoration: none;
 }
 
 li:hover {
-    color: aqua;
+  opacity: 0.7;
 }
 
-.side {
-    display: flex;
-    margin-left: 120px;
+
+li span {
+  color: #ff2e74;
+}
+
+
+
+.cart {
+  background-color: #03a9f4;
+  padding: 1px;
+  color: #fff;
+}
+
+.cart a {
+  color: #fff;
+  padding: 5px
+}
+
+.cart i {
+  margin-right: 5px;
+  color: #fff;
+}
+
+.cart span {
+  padding: 5px;
+}
+
+.menu-sub {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--white);
+  width: 100%;
+  display: none;
+  color: var(--black);
+  padding: 2em;
+  z-index: 6000;
+  transition: all 300ms ease;
+  opacity: 0;
+}
+
+.menu-col { 
+  width: 25%;
+  float: left;
+  margin-left: 50px;
+  transform: translateX(-30%);
+  padding: 0 50px;
+}
+
+.menu-col img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: rotateY(180deg) scale(1.5, 1.5);
+  margin: 40px 100px;
+}
+
+.menu-col h3 {
+  margin-left: 100px ;
+}
+
+.main-menu li:hover .menu-sub {
+  display: block;
+  top: 50px;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  transition: all 300ms ease;
+}
+
+.menu-sub ul, .menu-sub h3 {
+  margin-top: 5px;
+}
+
+.menu-sub li {
+  display: block;
+  padding: 10px;
+  color: var(--black);
+}
+
+.menu-sub a {
+  padding: 0px;
+}
+
+.menu-col a {
+  color: var(--black);
 }
 
 a {
     text-decoration: none;
-    color: #fff;
+    color: var(--black);
 }
 
-a:hover {
-    color: aqua;
+h2 {
+  font-size: xx-large;
 }
 
-
-.fa-apple {
-    color: #fff;
-    padding-left: 2.2em;
-    padding-right: 35em;
-    font-size: 18px;
+.form {
+	padding: 10px 20px;
+	margin: 100px 200px;
+  position: absolute;
+  top: 500px;
+  left: 500px;
 }
 
-
-.fa-cart-shopping {
-    color: #fff;
-    font-size: 14px;
-    margin-left: 80px;
+.form-control {
+	margin-bottom: 10px;
+	padding-bottom: 20px;
 }
 
-header {
-    height: 100%;
+.form-control label {
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.form-control input {
+	border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-family: inherit;
+	font-size: 14px;
+	padding: 10px;
 	width: 100%;
-    background-image: url('https://images.pexels.com/photos/813940/pexels-photo-813940.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
-    background-size: cover;
-	background-position: center;
+}
+
+.form-control input:focus {
+	outline: 0;
+	border-color: #777;
+}
+
+.form-control.success input {
+	border-color: #2ecc71;
+}
+
+.form-control.error input {
+	border-color: #e74c3c;
+}
+
+.form-control i {
+	visibility: hidden;
 	position: absolute;
-	top: 0;
+	top: 40px;
+	right: 10px;
+}
+
+.form-control.success i.fa-check-circle {
+	color: #2ecc71;
+	visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+	color: #e74c3c;
+	visibility: visible;
+}
+
+.form-control small {
+	color: #e74c3c;
+	position: absolute;
+	bottom: 0;
 	left: 0;
-    font-family: 'Open Sans', sans-serif;
+	visibility: hidden;
 }
 
-h1 {
-    z-index: 10;
-    color: #fff;
-    font-size: 55px;
-    letter-spacing: 1.2;
-    color: #000;
+.form-control.error small {
+	visibility: visible;
 }
 
-.support {
-    position: absolute;
-    top: 400px;
-    left: 30px;
+.form button {
+	background-color: powderblue;
+	border: 2px solid #8e44ad;
+	cursor: pointer;
+	border-radius: 4px;
+	color: #fff;
+	display: block;
+	font-family: inherit;
+	font-size: 16px;
+	padding: 10px;
+	margin-top: 20px;
+	width: 100%;
 }
 
-p {
-    font-size: 25px;
-    color: #fff;
-    text-align: center;
-    margin-bottom: 10px;
+
+
+@media screen and (max-width: 480px) {
+
+	.social-panel-container.visible {
+		transform: translateX(0px);
+	}
+	
+	.floating-btn {
+		right: 10px;
+	}
 }
 
-form.example input[type=text] {
-    padding: 10px;
-    font-size: 17px;
-    border: 1px solid grey;
-    float: left;
-    width: 80%;
-    background: #f1f1f1;
-  }
-  
+@media(max-width: 768px) {
  
-  form.example button {
-    float: left;
-    width: 20%;
-    padding: 10px;
-    background: #2196F3;
-    color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-left: none; 
-    cursor: pointer;
+  .logo {
+    font-size: 13px;
+    margin: 0 auto;
   }
-  
-  form.example button:hover {
-    background: #0b7dda;
-  }
-  
- 
-  form.example::after {
-    content: "";
-    clear: both;
-    display: table;
+}
+
+@media(max-width: 500px) {
+
+  body {
+    overflow-x: hidden;
   }
 
+  .logo {
+    font-size: 13px;
+    margin: 0 auto;
+  }
 
-
-
+  .container {
+    width: 800px;
+    margin-left: -150px;
+  }
+  .form-control input {
+    padding: 5px;
+  }
+}
