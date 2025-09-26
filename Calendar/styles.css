@@ -20,12 +20,12 @@ body {
   background-size: cover;
   background-position: center;
   opacity: 0;
+  transition: opacity 1.5s ease;
   z-index: 0;
-  transition: all 1s linear;
 }
 
 .slide.active {
-  opacity: .65;
+  opacity: 0.6;
 }
 
 #container {
@@ -41,7 +41,6 @@ body {
 #header {
   padding: 0.325em;
   color: #fff;
-  letter-spacing: 5px;
   font-family: 'Rouge Script', sans-serif;
   font-size: 3.438rem;
   text-shadow: 0.1rem 0.2rem 0.2rem rgb(8, 8, 8);
@@ -50,31 +49,35 @@ body {
 }
 
 #header button {
-    background-color: transparent;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 50px;
-    /*text-shadow: 0rem 0.3rem 0.5rem rgba(0, 0, 0, 0.8); */
-    text-shadow: 0.1rem 0.2rem 0.2rem rgb(8, 8, 8);
-    position: relative;
-}
+ background-color: transparent;
+ border: none;
+ color: #fff;
+ cursor: pointer;
+ font-weight: bolder;
+ font-size: x-large;
+ /*text-shadow: 0rem 0.3rem 0.5rem rgba(0, 0, 0, 0.8); */
+ text-shadow: 0.1rem 0.2rem 0.2rem rgb(8, 8, 8);
+ position: relative;
+} 
 
 #monthDisplay {
   text-align: center;
+  margin-top: -.5em;
 }
 
 .prev {
   position: absolute;
   left: 10%;
   bottom: 0px;
+  font-size: 2rem;
 }
 
 .next {
   position: absolute;
   right: 10%;
   bottom: 0px;
+  font-size: 2rem;
+  color: black;
 }
 
 #header p {
@@ -85,7 +88,6 @@ body {
   word-spacing: 10px;
   line-height: 5px;
   text-align: center;
-  transform: translateY(-1em);
 }
 
 #weekdays {
@@ -95,7 +97,6 @@ body {
   text-shadow: 0.1rem 0.2rem 0.2rem rgb(8, 8, 8);
   font-size: 1.275rem;
   font-weight: bolder;
-  letter-spacing: 3px;
   z-index: 500;
   text-transform: uppercase;
   text-align: center;
@@ -104,7 +105,7 @@ body {
 #weekdays div {
   width: 100%;
   padding: 0.625em;
-  margin: -1.5em 0.5em .5em;
+  margin: -1em 0.5em .5em;
   color: #fff;
   text-align: center;
   z-index: 500;
@@ -128,26 +129,15 @@ body {
   font-weight: bolder;
   z-index: 1000;
   background-color: transparent;
-  margin: .5% 1.8%;
+  margin: .7% 1.8%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   color: #fff;
-  text-shadow: 0.1rem 0.2rem 0.2rem rgb(8, 8, 8); 
-  /*text-shadow: 0rem 0.3rem 0.5rem rgba(0, 0, 0, 1.0); 
-  text-shadow: 0rem 0.3rem 0.5rem rgb(0, 0, 0); 
-  text-shadow: 0.1rem 0.2rem 0.2rem rgb(8, 8, 8);*/
+  text-shadow: 0.1rem 0.2rem 0.2rem rgb(8, 8, 8);
   text-align: center;
   position: relative;
 }
-
-.day div {
-  width: calc(44.4rem / 7);
-  text-align: center;
-} 
-  .day div:not(:hover) {
-      transform: scale(1.05);
-    }
 
 .day:hover,
 #currentDay {
@@ -155,6 +145,10 @@ body {
   border-radius: 5px;
 }
 
+.day div {
+  width: calc(44.4rem / 7);
+  text-align: center;
+}
 
 .padding {
   background-color: transparent;
@@ -172,7 +166,7 @@ body {
   overflow: hidden;
   position: absolute;
   bottom: 8px;
-} 
+}
 
 .padding {
   cursor: default !important;
@@ -243,8 +237,7 @@ body {
   justify-content: space-between;
   background-color: transparent;
   border: none;
-  position: relative;
-} 
+}
 
 @media (max-width: 600px) {
 
@@ -304,4 +297,4 @@ body {
     left: calc(50% - 155px);
   }
 
-} 
+}

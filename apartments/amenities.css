@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 
 .imgHead {
     width: 100%;
@@ -12,11 +18,8 @@
     color: #fff;
     text-transform: uppercase;
     position: relative;
-    margin-left: 50px;
-    letter-spacing: 6px;
     z-index: 10;
     text-align: left;
-    text-shadow: 2px 2px rgb(3, 72, 99);
     padding-top: 20px;
 }
 
