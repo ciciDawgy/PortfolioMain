@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="slider.css">
+    <title>Carousel</title>
+</head>
+<body>
+    
+    <div class="container lightBox">
+        <nav>
+                <ul class="main-menu">
+                  <li><a href="index.html" class="logo">Classic Cars</a></li>
+                    <li><a href="products.html" class="">Products
+                     <i class="fas fa-chevron-down"></i>
+                      <div class="menu-sub">
+                        <div class="menu-col">  
+                          <h3>Hippie</h3>
+                            <a href="products.html"><img src="https://images.unsplash.com/photo-1514899307441-bee613d8e6e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"></a>
+                      </div>
+                      <div class="menu-col">  
+                          <h3>Bug</h3>
+                          <a href="products.html"><img src="https://sp-ao.shortpixel.ai/client/q_glossy,ret_img,w_1049/https://journal.classiccars.com/media/2020/05/Beetle1.jpg"></a>
+                      </div>
+                      <div class="menu-col">  
+                        <h3>Convertible</h3>
+                       <ul>
+                         <a href="products.html"><img src="https://images.unsplash.com/photo-1517271710308-aa99f1519490?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"></a>
+                        </ul>
+                          <li><a href="services.html">Services</a></li>
+                          <li class="cart"><a href="#"><i class="fa-solid fa-cart-shopping"></i>Cart<span>0</span></a></li>
+                          <li><a href="contact.html">Contact</a></li>
+                    </div>
+           </nav>
+         </div>
+      
+            <div class="slider">
+                <i class="fas fa-chevron-right nextBtn"></i>
+                <i class="fas fa-chevron-left prevBtn"></i>
+                    <div
+                    class="slide active"
+                    style="
+                    background-image: url('https://images.unsplash.com/photo-1626280473612-52323827dcc7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80');
+                    "
+                ><p>1960 Porsche</p>
+                <p class="price">$104,000</p>
+                 </div>
+                <div
+                    class="slide"
+                    style="
+                    background-image: url('https://images.unsplash.com/photo-1511407401960-0ee203836665?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80');
+                    "
+                ><p>1958 Beetle</p>
+                <p class="price">$35,000</p>
+                </div>
+                <div
+                    class="slide"
+                    style="
+                    background-image: url('https://images.unsplash.com/photo-1572194121169-d8cdfaa40ca7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80');
+                    "
+                ><p>1941 Cadillac</p>
+                <p class="price">$52,000</p>
+                </div>
+
+                <div
+                    class="slide"
+                    style="
+                    background-image: url('https://images.unsplash.com/photo-1517491093410-ab48c47bc750?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+                    "
+                ><p>1959 Chevrolet</p>
+                <p class="price">$83,000</p>
+                </div>
+
+                <div
+                    class="slide"
+                    style="
+                    background-image: url('https://images.pexels.com/photos/819791/pexels-photo-819791.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+                    "
+                ><p>1954 Ford</p>
+                <p class="price">$45,500</p>
+                 </div>
+                <div
+                class="slide"
+                style="
+                    background-image: url('https://images.unsplash.com/photo-1520995749626-73103c69a7d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+                "><p>1952 Chevrolet</p>
+                  <p class="price">$92,000</p>
+              </div>    
+              
+    <script src="slider.js"></script>
+</body>
+</html>

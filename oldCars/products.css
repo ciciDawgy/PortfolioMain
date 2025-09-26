@@ -1,0 +1,479 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+  :root {
+    --primary: #ff4545;
+    --white: #fff;
+    --black: #000;
+    --grey1: #3a3b3c;
+    --grey2: #828282;
+    --blue: hsl(199,92%,43%);
+}
+
+
+
+header {
+  position: relative;
+  background-image: url('https://cdn.pixabay.com/photo/2020/04/24/12/24/model-car-5086647_1280.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;  
+  height: 150px; 
+  width: 100%;
+} 
+
+/*
+header {
+  position: relative;
+  background-image: url('https://www.carcovers.com/media/carcover/resource/classiccar.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 150px; 
+  width: 100%;  
+} 
+*/
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: all 500ms ease-in-out;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  padding: 0 !important;
+  margin: 0 !important;
+  background-color: rgba(10, 10, 10, 0.5);
+}  
+
+nav {
+  display: flex;
+  transition: all 1900ms ease;
+}
+
+/*
+nav {
+  display: flex;
+  margin-top: 0px;
+  transition: all 1900ms ease;
+  font-size: 16px;
+} */
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin-left: 0px;
+}
+
+nav ul li {
+  margin: 30px 20px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+  section {
+    padding: 20px 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 40px auto;
+  } 
+  
+  section ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  section ul li {
+    list-style: none;
+    background-color: #eee;
+    padding: 12px 20px;
+    margin: 20px 5px 55px;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+  
+  
+  section ul li.active {
+    background-color: #03a9f4;
+    color: #fff;
+  } 
+
+  .oldCar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+  }
+  
+
+  .pics {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .pics .item-box {
+    position: relative;
+    width: 290px;
+    height: 260px;
+    margin: 10px 10px 50px 5px;
+  }
+  
+  .pics .item-box.hide {
+    display: none;
+  }
+  
+  .pics .item-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s;
+  }
+  
+  .pics .item-box img:hover {
+    filter: grayscale(100%);
+    transform: scale(1.1);
+  }
+  
+  
+  @keyframes spin {
+    from {transform: rotateZ(0deg);}
+    to {transform: rotateZ(360deg);}
+  }
+  
+  /*
+  #lightbox {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .08);
+    display: none;
+    perspective: 1000px;
+    transition: 0.4s ease;
+  } 
+  
+  #lightbox.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    padding: 4px;
+    background-color: black;
+    border: 2px solid white;
+    transition: 0.4s ease;
+  }
+  
+  #lightbox img .big {
+    transform: rotateZ(360deg);
+  }
+*/
+       
+    #lightbox {
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, .92);
+      display: none;
+      perspective: 1000px;
+      transition: 0.4s ease;
+    }
+    
+    #lightbox.active {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    #lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      padding: 4px;
+      background-color: black;
+      border: 2px solid white;
+      transition: 0.4s ease;
+    }
+  
+  .fas fa-arrow-right {
+    z-index: 100;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    font-size: 24px;
+    color: #000;
+    display: none;
+  }
+
+  .addCart {
+    position: absolute;
+    right: .05rem;
+    bottom: .1rem;
+    background-color: white;
+    border-radius: 50%;
+    padding: .8rem 1.0rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+  }
+
+  
+   .addCart:hover {
+    background-color: #ff4545;
+    color: white;
+    border-radius: 1rem 0 0 0;
+  }
+
+  .cart {
+    background-color: #03a9f4;
+    padding: 1px;
+  }
+ 
+  .cart span {
+    padding: 5px;
+  }
+
+  .fa-cart-shopping {
+    padding: 5px;
+  }
+
+  
+  .logo {
+    text-transform: uppercase;
+    border: 3px solid var(--black);
+    color: var(--primary);
+    font-size: 28px;
+    font-weight: bold;
+    padding: 3px;
+    margin-left: 50px;
+    margin-right: 680px;
+    background-color: #fff;
+  } 
+
+  .logo:hover {
+    background-color: var(--grey1);
+    color: var(--primary);
+    transition: background-color 0.5s;
+    cursor: pointer;
+}
+
+/*shopping cart */
+
+.containerTwo {
+  width: 700px;
+  margin: 0 auto;
+  padding: 2.5em;
+  background-color: var(--white);
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  display: none;
+}
+
+.content-section {
+  margin: 1em;
+}
+
+.showContainer {
+  display: block;
+  z-index: 2000;
+}
+
+.section-header {
+  font-family: "Metal Mania";
+  font-weight: normal;
+  color: #333;
+  text-align: center;
+  font-size: 2.5em;
+}
+
+
+.btn {
+  text-align: center;
+  vertical-align: middle;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+
+.btn-primary {
+  color: white;
+  background-color: #56CCF2;
+  border: none;
+  border-radius: .3em;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background-color: #2D9CDB;
+}
+
+
+.cart-column {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+  margin-right: 1.5em;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+
+.cart-row {
+  display: flex;
+}
+
+.cart-item {
+  width: 45%;
+}
+
+.cart-price {
+  width: 20%;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.cart-quantity {
+  width: 35%;
+}
+
+.cart-item-title {
+  color: #333;
+  margin-left: .5em;
+  font-size: 1.2em;
+}
+
+.cart-item-image {
+  width: 75px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.btn-danger {
+  color: white;
+  background-color: #EB5757;
+  border: none;
+  border-radius: .3em;
+  font-weight: bold;
+}
+
+.btn-danger:hover {
+  background-color: #CC4C4C;
+}
+
+.cart-quantity-input {
+  height: 34px;
+  width: 50px;
+  border-radius: 5px;
+  border: 1px solid #56CCF2;
+  background-color: #eee;
+  color: #333;
+  padding: 0;
+  text-align: center;
+  font-size: 1.2em;
+  margin-right: 25px;
+}
+
+.cart-row:last-child {
+  border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+  border: none;
+}
+
+.cart-total {
+  text-align: end;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.cart-total-title {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: black;
+  margin-right: 20px;
+}
+
+.cart-total-price {
+  color: #333;
+  font-size: 1.1em;
+}
+
+.btn-purchase {
+  display: block;
+  margin: 40px auto 5px auto;
+  font-size: 1em;
+}
+
+.fa-times {
+position: absolute;
+right: 20px;
+font-size: 22px;
+cursor: pointer;
+}
+
+.shop {
+background-color: #000;
+color: #fff;
+border-radius: 8px;
+padding: 5px 15px;
+margin-left: 45%;
+}
+
+.shop:hover {
+opacity: 0.75;
+}
+
+
+  
+    @media(max-width: 500px) {
+      .logo {
+        font-size: 14px;
+        margin-left: 0px;
+        padding: 1px 2px;
+        border: 2px solid black;
+      }
+  
+      body {
+        overflow-x: hidden;
+      }
+    }
