@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Tech Bulb</title>
+</head>
+<body>
+    <section>
+      <header>
+        <!--menu-->
+         <nav>
+            <ul>
+                <li class="logo"><a href="index.html"><i class="fa-brands fa-apple"></i></a></li>
+                <li><a href="signUp.html">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="UTunes.html" >More</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="cart"><a href="#"><i class="fas fa-cart-shopping"></i></a></li>
+            </ul>
+          </nav>
+          <!--Hidden Menu for mobile and tablet devices-->
+          <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+             <div class="bar-1"></div>
+             <div class="bar-2"></div>
+             <div class="bar-3"></div>
+             <ul class="mobile-menu">
+               <li class="logo"><a href="index.html"><i class="fa-brands fa-apple"></i></a></li>
+               <li><a href="signUp.html" target="_blank">Register</a></li>
+               <li><a href="login.html"  target="_blank">Login</a></li>
+               <li><a href="products.html" target="_blank">Products</a></li>
+               <li><a href="UTunes.html"  target="_blank">More</a></li>
+               <li><a href="contact.html"  target="_blank">Contact</a></li>
+               <li class="cart"><a href="#"><i class="fas fa-cart-shopping"></i></a></li>
+            </ul>
+          </div>
+          <!--Hero Section-->
+          <h1>Sign up today and listen for free</h1>
+          <img src="https://freepngimg.com/thumb/music/1-2-music-png-picture.png" alt="music">
+          <a href="signUp.html" class="btn">Sign Up</a>
+        </header>
+      </section>
+      <!--Categories-->
+        <section class="categories">
+          <h2>Popular Genres</h2>
+          <div class="category">
+              <div>
+                  <i class="fa-solid fa-music"></i>
+                  <h5>Country</h5>
+              </div>
+              <div>
+                  <i class="fa-solid fa-circle-play"></i>
+                  <h5>Pop</h5>
+              </div>
+              <div>
+                  <i class="fa-solid fa-headphones-simple"></i>
+                  <h5>Rock</h5>
+              </div>
+              <div>
+                  <i class="fa-solid fa-guitar"></i>
+                  <h5>Hip Hop</h5>
+              </div>
+              <div>
+                  <i class="fa-solid fa-compact-disc"></i>
+                  <h5>Pop Rock</h5>
+              </div>
+          </div>
+        </section>
+        <!--Playlist-->
+        <section class="playlist">
+              <h3>Personalized Recommendations Based On....</h3>
+              <div>
+                 <i class="fa-solid fa-headphones"></i>
+                 <h4>Listening Behavior</h4>
+                 <p>Music maps are visual representations of how songs are related based on user listening patterns. UTunes creates these maps by analyzing which tracks are often played together and grouping songs into clusters that reflect common listening patterns. </p>
+              </div>
+              <div>
+                  <i class="fa-brands fa-soundcloud"></i>
+                  <h4>Content Characteristics</h4>
+                  <p>UTunes considers the characteristics of content, such as its genre, release date, artist, album, duration, key signal, mode, time signature, tempo, language, instruments, featured artists, producer, lyrics and 
+                     podcast category.</p>
+                </div>
+                <div>
+                  <i class="fa-regular fa-circle-down"></i>
+                  <h4>User Information</h4>
+                  <p>UTunes uses information shared by users, such as their age, language, location, and who they follow, to help determine their interests.</p>
+                </div>
+        </section>
+        <!--Products-->
+        <section class="productsContainer">
+          <div class="products slide active">
+            <h3>Premium Membership Inclusive</h3>
+            <div>
+              <img src="https://images.pexels.com/photos/3831187/pexels-photo-3831187.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="headphones">
+              <p>Choose a Premium plan and listen to ad-free music without limits on your phone, speaker, and other devices. Pay in various ways. Cancel anytime.</p>
+            </div>
+            <div>
+              <img src="https://images.pexels.com/photos/1587927/pexels-photo-1587927.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="cloud">
+              <p>Offline listening: Download songs to listen to without an internet connection. Listen in real time with friends. Organize listening queue: Create and manage your listening queue.</p>
+            </div>
+            <div>
+              <img src="https://images.pexels.com/photos/3767420/pexels-photo-3767420.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="download"> 
+              <p>Personal recommendations: Spotify uses information shared by users, such as their age, language, location, and who they follow, to help determine their interests.</p>
+              <a href="services.html" class="btn">Learn More</a>
+            </div>
+          </div>
+          <div class="products slide">
+            <h3>Premium Membership Inclusive</h3>
+            <div>
+              <img src="https://images.pexels.com/photos/144429/pexels-photo-144429.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="ipod">
+              <p>Play songs in any order: Skip songs as many times as you want.</p>
+            </div>
+            <div>
+              <img src="https://images.pexels.com/photos/577769/pexels-photo-577769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="headphones">
+              <p>Audiobook listening: Listen to audiobooks from Spotify's subscriber catalog.</p>
+            </div>
+            <div>
+              <img src="https://images.pexels.com/photos/1001850/pexels-photo-1001850.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="headphones">
+              <p>Parental controls: Set filters to limit what your family members can hear.</p>
+              <a href="services.html" class="btn">Learn More</a>
+            </div>
+          </div>
+          <div class="products slide">
+            <h3>Premium Membership Inclusive</h3>
+            <div>
+              <img src="https://images.pexels.com/photos/164827/pexels-photo-164827.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="ipod">
+              <p>Premium accounts offer higher audio quality options (up to 320 kbps), providing a better listening experience.</p>
+            </div>
+            <div>
+              <img src="https://images.pexels.com/photos/235534/pexels-photo-235534.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="headphones">
+              <p>Free users have access to a limited selection of songs. Premium users can select any song.</p>
+            </div>
+            <div>
+              <img src="https://images.pexels.com/photos/1490844/pexels-photo-1490844.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="headphones">
+              <p>Occasionally, premium users may have access to exclusive content, such as early releases or special playlists.</p>
+              <a href="services.html" class="btn">Learn More</a>
+            </div>
+          </div>
+          <button class="arrow prevBtn"> <i class="fas fa-chevron-left"></i></button>
+          <button class="arrow nextBtn"> <i class="fas fa-chevron-right"></i></button>
+        </section>
+
+        <!--
+       <div class="prevBtn slideBtn">
+        <i class="fas fa-chevron-left"></i>
+      </div>
+  
+        <div class="nextBtn slideBtn">
+            <i class="fas fa-chevron-right"></i>
+        </div> -->
+      </div>
+      
+  
+
+   <section>
+    <footer id="footer" class="section footer">
+      
+        <div class="footer-container">
+          <div class="footer-center">
+            <h3>COMPANY</h3>
+            <a href="#">About</a>
+            <a href="#">Jobs</a>
+            <a href="# ">For The Record</a>
+          </div>
+          <div class="footer-center">
+            <h3>PLANS</h3>
+            <a href="services.html">Basic</a>
+            <a href="services.html">Standard</a>
+            <a href="services.html">Pro</a>
+          </div>
+          <div class="footer-center">
+            <h3>Cart</h3>
+            <a href="store.html">Cart</a>
+            <a href="#">Liked Items</a>
+          </div>
+          <div class="footer-center">
+            <h3>Contact</h3>
+            <div>
+              <span>
+                <i class="far fa-envelope"></i>
+              </span>
+              Email
+            </div>
+            <div>
+              <span>
+                <i class="fas fa-phone"></i>
+              </span>
+              325-446-203
+            </div>
+            <div>
+              <span>
+                <i class="fas fa-phone"></i>
+              </span>
+              333-222-102
+            </div>
+        </div>
+    </footer>
+    </section> 
+
+  
+
+    <script src="script.js"></script>
+</body>
+</html>

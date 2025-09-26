@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calendar with Background Slider</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   
+      <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1600699260716-d5ed9a3f9efe?q=80&w=2068&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+      <div class="slide"style="background-image: url('beachTwo.jpg');"></div>
+      <div class="slide" style="background-image: url('https://cdn.pixabay.com/photo/2024/01/18/10/07/sunset-8516639_1280.jpg');"></div>
+      <div class="slide" style="background-image: url('yellowSky.jpg');"></div>
+      <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+      <div class="slide" style="background-image: url('purplePond.jpg');"></div>
+      <div class="slide" style="background-image: url('https://images.pexels.com/photos/130879/pexels-photo-130879.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');"></div>
+      <div class="slide" style="background-image: url('beachThree.jpg');"></div>
+      <div class="slide" style="background-image: url('https://plus.unsplash.com/premium_photo-1705477188192-29099708dcd8?q=80&w=1529&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+      <div class="slide" style="background-image: url('field.jpg');"></div>
+      <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1495567720989-cebdbdd97913?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+      <div class="slide active" style="background-image: url('https://cdn.pixabay.com/photo/2017/02/26/19/42/beach-2101177_1280.jpg');"></div> 
+        
+
+  <div id="container">
+    <div id="header">
+      <div class="buttons">
+        <button id="backButton" class="prev">‹</button>
+        <div id="monthDisplay"></div>
+        <button id="nextButton" class="next">›</button>
+      </div>
+      <p id="todayDate"></p>
+    </div>
+    <div id="weekdays">
+      <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+    </div>
+    <div id="calendar"></div>
+  </div>
+
+  <!-- Modals -->
+  <div id="newEventModal">
+    <h2>New Event</h2>
+    <input id="eventTitleInput" placeholder="Event Title"/>
+    <button id="saveButton">Save</button>
+    <button id="cancelButton">Cancel</button>
+  </div>
+
+  <div id="deleteEventModal">
+    <h2>Event</h2>
+    <div id="eventText"></div>
+    <button id="deleteButton">Delete</button>
+    <button id="closeButton">Close</button>
+  </div>
+
+  <div id="modalBackDrop"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

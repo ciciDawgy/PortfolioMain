@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+  z-index: 0;
+}
+
+.slide.active {
+  opacity: 0.6;
+}
+
+#container {
+  position: relative;
+  z-index: 1;
+  width: 85%;
+  margin: auto;
+  padding: 1em;
+  color: #fff;
+  text-shadow: 0rem 0.3rem 0.5rem rgba(0, 0, 0, 1);
+} 
+
+#header {
+  padding: 0.325em;
+  color: #fff;
+  font-family: 'Rouge Script', sans-serif;
+  font-size: 3.438rem;
+  text-shadow: 0.1rem 0.2rem 0.2rem rgb(8, 8, 8);
+  /*text-shadow: 0rem 0.3rem 0.5rem rgba(0, 0, 0, 0.8); */
+  font-weight: bolder;
+}
+
+#header button {
+ background-color: transparent;
+ border: none;
+ color: #fff;
+ cursor: pointer;
+ font-weight: bolder;
+ font-size: x-large;
+ /*text-shadow: 0rem 0.3rem 0.5rem rgba(0, 0, 0, 0.8); */
+ text-shadow: 0.1rem 0.2rem 0.2rem rgb(8, 8, 8);
+ position: relative;
+} 
+
+#monthDisplay {
+  text-align: center;
+  margin-top: -.5em;
+}
+
+.prev {
+  position: absolute;
+  left: 10%;
+  bottom: 0px;
+  font-size: 2rem;
+}
+
+.next {
+  position: absolute;
+  right: 10%;
+  bottom: 0px;
+  font-size: 2rem;
+  color: black;
+}
+
+#header p {
+  font-family: arial;
+  font-size: 0.813rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  word-spacing: 10px;
+  line-height: 5px;
+  text-align: center;
+}
+
+#weekdays {
+  width: 100%;
+  display: flex;
+ /* text-shadow: 0rem 0.3rem 0.5rem rgba(0, 0, 0, 1.0); */
+  text-shadow: 0.1rem 0.2rem 0.2rem rgb(8, 8, 8);
+  font-size: 1.275rem;
+  font-weight: bolder;
+  z-index: 500;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#weekdays div {
+  width: 100%;
+  padding: 0.625em;
+  margin: -1em 0.5em .5em;
+  color: #fff;
+  text-align: center;
+  z-index: 500;
+}
+
+#calendar {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  opacity: 1;
+  z-index: 2000;
+}
+
+.day {
+  width: 10.5%;
+  padding: .8em 0em .1em .4em;
+  cursor: pointer;
+  box-sizing: border-box;
+  font-size: 1.4rem;
+  font-weight: bolder;
+  z-index: 1000;
+  background-color: transparent;
+  margin: .7% 1.8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+  text-shadow: 0.1rem 0.2rem 0.2rem rgb(8, 8, 8);
+  text-align: center;
+  position: relative;
+}
+
+.day:hover,
+#currentDay {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.day div {
+  width: calc(44.4rem / 7);
+  text-align: center;
+}
+
+.padding {
+  background-color: transparent;
+  cursor: default;
+}
+
+.event {
+  font-size: .625rem;
+  padding: 0.188em;
+  background-color: rgba(4, 100, 250, 0.4);
+  color: white;
+  border-radius: 5px;
+  max-height: 55px;
+  max-width: 30px;
+  overflow: hidden;
+  position: absolute;
+  bottom: 8px;
+}
+
+.padding {
+  cursor: default !important;
+  background-color: none;
+  box-shadow: none !important;
+} 
+
+#newEventModal, #deleteEventModal {
+  display: none;
+  z-index: 2000;
+  padding: 1.563em;
+  background-color: #e8f4fa;
+  box-shadow: 0px 0px 3px black;
+  border-radius: 5px;
+  width: 35%;
+  top: 150px;
+  left: calc(50% - 255px);
+  position: absolute;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+#eventTitleInput {
+  padding: .625em;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 1.563em;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 3px gray;
+}
+#eventTitleInput.error {
+  border: 2px solid red;
+}
+#cancelButton, #deleteButton {
+  background-color: #18a8e5;
+  color: #fff;
+  border: none;
+  padding: .375em;
+}
+#saveButton, #closeButton {
+  background-color: #0d37f3;
+  color: #fff;
+  border: none;
+  padding: 6px;
+}
+#eventText {
+  font-size: .875rem;
+}
+#modalBackDrop {
+  display: none;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.buttons {
+  padding: .375em .625em;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  border: none;
+}
+
+@media (max-width: 600px) {
+
+  #container {
+    width: 80%;
+  }
+
+  #weekdays {
+    font-size: .825rem;
+  }
+
+  .prev {
+    position: absolute;
+    left: .2em;
+    bottom: 1.75em;
+  }
+  
+  .next {
+    position: absolute;
+    right: .2em;
+    bottom: 1.75em;
+  } 
+
+  .day {
+    font-size: 1.2rem;
+    padding: .8em 0em .5em .55em;
+  }
+
+  #newEventModal  {
+    left: calc(30% - 5%);
+  }
+
+  #deleteEventModal {
+    left: calc(50% - 105px);
+  }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+  #container {
+    width: 80%;
+  }
+
+  #weekdays {
+    font-size: 1rem;
+  }
+  
+  .day {
+    font-size: 1.4rem;
+    padding: .8em 0em .5em .55em;
+  }
+
+  #newEventModal  {
+    left: calc(50% - 155px);
+  }
+
+  #deleteEventModal {
+    left: calc(50% - 155px);
+  }
+
+}

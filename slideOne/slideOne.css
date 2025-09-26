@@ -1,0 +1,351 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*body {
+  background-image: url('https://images.unsplash.com/photo-1526660690293-bcd32dc3b123?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}*/
+
+/*https://www.youtube.com/watch?v=k9pOWBPZ3aQ*/
+
+.slideshowContainer {
+  max-width: 1500px;
+  overflow: hidden;
+}
+
+
+  .pics {
+   display: flex;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+ }
+ 
+ 
+ .pic {
+     overflow: hidden;
+     width: 350px;
+     height: 700px;
+     position: relative;
+     animation: FadeInOut 17s ease-in-out infinite;
+ }
+
+ .pic:before {
+    background: rgba(15,25,30,0.5);
+    content: " ";
+    display: block;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+ .picP {
+    overflow: hidden;
+    width: 350px;
+    height: 700px;
+    position: relative;
+    animation: fadeIn 17s ease-in-out infinite;
+}
+
+ /*.picsMore {
+    animation: fadeIn 17s ease-in-out;
+ }*/
+
+ /*@keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}*/
+ 
+ /*.pic:before {
+     content: " ";
+     display: block;
+     left: 0;
+     top: 0;
+     overflow: hidden;
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     .5, 1, 1.5, 2
+ }
+ */
+ .pic:nth-child(1) {
+     animation-delay: .5s;
+ }
+ 
+ .pic:nth-child(2) {
+     animation-delay: 1s;
+ }
+ 
+ .pic:nth-child(3) {
+     animation-delay: 1.5s;
+ }
+ 
+ .pic:nth-child(4) {
+     animation-delay: 2s;
+ }
+
+ .picP:nth-child(1) {
+  animation-delay: .8s;
+}
+
+.picP:nth-child(2) {
+  animation-delay: 1.3s;
+}
+
+.picP:nth-child(3) {
+  animation-delay: 1.8s;
+}
+
+.picP:nth-child(4) {
+  animation-delay: 2.3s;
+}
+
+
+ 
+     .pic h3 {
+         font-family: "Vollkorn",serif;
+         left: 15%;
+         letter-spacing: 4px;
+         font-size: 25px;
+         line-height: 27.984px;
+         position: absolute;
+         bottom: 15%;
+         z-index: 250;
+         color: #fff;
+         text-align: left;
+     }
+  
+   .pic:hover::before {
+     content: ' ';
+     display: none;
+ }
+ 
+   .pic:hover .picContent {
+         transform: translateY(-200px);
+         transition: transform 1s;
+     }
+ 
+ 
+ .picOne {
+     background: url('');
+     background-position: center center;
+     background-repeat: no-repeat;
+     background-size: cover;
+ }
+ 
+ .picTwo {
+     background: url('https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=362&q=80');
+     background-position: center center;
+     background-repeat: no-repeat;
+     background-size: cover;
+ }
+ 
+ .picThree {
+     background: url('https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=394&q=80');
+     background-position: center center;
+     background-repeat: no-repeat;
+     background-size: cover;
+ }
+ 
+ .picFour {
+     background: url('https://images.unsplash.com/photo-1583511655826-05700d52f4d9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80');
+     background-position: center center;
+     background-repeat: no-repeat;
+     background-size: cover;
+ }
+ 
+ .picFive {
+  background: url('https://images.unsplash.com/photo-1598133894008-61f7fdb8cc3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.picSix {
+  background: url('https://images.unsplash.com/photo-1598133893847-a3b6858156d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.picSeven {
+  background: url('https://images.unsplash.com/photo-1588943211346-0908a1fb0b01?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.picEight {
+  background: url('https://images.unsplash.com/photo-1624956741711-9e4001049662?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+ 
+.picNine {
+  background: url('https://images.unsplash.com/photo-1510771463146-e89e6e86560e?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=327');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.picTen {
+  background: url('https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.picEleven {
+  background: url('https://images.unsplash.com/photo-1590634332992-b8b4a4b7ae47?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=502&q=80');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.picTwelve {
+  background: url('https://images.unsplash.com/photo-1586671267731-da2cf3ceeb80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=389&q=80');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.fadeIn {
+  animation: fadeIn 17s;
+  animation-timing-function: ease;
+}
+
+.fadeInOut {
+  animation: fadeInOut 17s;
+  animation-timing-function: ease;
+}
+
+/*@keyframes fadeinout {
+0%,100% { opacity: 0; }
+50% { opacity: 1; }
+}*/
+
+
+@keyframes FadeInOut {
+  0% {
+  opacity:1;
+    }
+    45% {
+    opacity:1;
+    }
+    55% {
+    opacity:0;
+    }
+    100% {
+    opacity:0;
+    }
+}
+
+
+@keyframes fadeIn {
+  0% {
+  opacity:0;
+  }
+  45% {
+  opacity:0;
+  }
+  55% {
+  opacity:1;
+  }
+  100% {
+  opacity:1;
+  }
+  }
+/*
+#MTG
+{
+    width:225px;
+    height:300px;
+    border:solid black 2px;
+    position:fixed;
+    animation-name:MTG;
+    animation-duration:15s;
+    /*animation-delay:10s;*/
+    /*animation-timing-function:linear;
+    animation-iteration-count:infinite;
+    animation-direction:normal;
+   /* transition-duration:5s;*/
+/*}
+@keyframes MTG
+{
+    0%, 15%
+    {
+        background-image:url(http://lorempixel.com/225/300/nature/1/)
+    }
+    20%, 35%
+    {
+        background-image:url(http://lorempixel.com/225/300/nature/2/)
+    }
+    40%, 55%
+    {
+        background-image:url(http://lorempixel.com/225/300/nature/3/)
+    }
+    60%, 75%
+    {
+        background-image:url(http://lorempixel.com/225/300/nature/4/)
+    }
+    80%, 95%{
+        background-image:url(http://lorempixel.com/225/300/nature/5/)
+ 
+#cf3 img.top {
+animation-name: cf3FadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 10s;
+animation-direction: alternate;
+}
+/*
+.MTG {
+  width:225px;
+  height:300px;
+  border:solid black 2px;
+  position:fixed;
+  animation-name:MTG;
+  animation-duration:15s;
+  /*animation-delay:10s;*/
+  /*animation-timing-function:linear;
+  animation-iteration-count:infinite;
+  animation-direction:normal;
+ /* transition-duration:5s;*/ /*
+@keyframes MTG
+{
+  0%, 15%
+  {
+      background-image:url(http://lorempixel.com/225/300/nature/1/)
+  }
+  20%, 35%
+  {
+      background-image:url(http://lorempixel.com/225/300/nature/2/)
+  }
+  40%, 55%
+  {
+      background-image:url(http://lorempixel.com/225/300/nature/3/)
+  }
+  60%, 75%
+  {
+      background-image:url(http://lorempixel.com/225/300/nature/4/)
+  }
+  80%, 95%{
+      background-image:url(http://lorempixel.com/225/300/nature/5/)
+  }
+  100%{
+      background-image:url(http://lorempixel.com/225/300/nature/1/)
+  }
+}*/

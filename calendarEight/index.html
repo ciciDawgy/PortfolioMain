@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Calendar</title>
+  </head>
+  <body>
+    
+    <div>
+      <div id="header">
+        <div id="monthDisplay">
+       </div>
+          <p>date</p>
+        <div class="buttons">
+          <button id="backButton"><i class="fas fa-angle-left prev"></i></button>
+          <button id="nextButton"><i class="fas fa-angle-right next"></i></button>
+        </div>
+      </div>
+
+      <div id="weekdays">
+        <div>Sun</div>
+        <div>Mon</div>
+        <div>Tue</div>
+        <div>Wed</div>
+        <div>Thu</div>
+        <div>Fri</div>
+        <div>Sat</div>
+      </div>
+
+      <div id="calendar"></div>
+
+          <div class="slider-container">
+
+      
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1600699260716-d5ed9a3f9efe?q=80&w=2068&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+            <div class="slide" style="background-image: url('beach.jpg');"></div>
+            <div class="slide" style="background-image: url('https://cdn.pixabay.com/photo/2024/01/18/10/07/sunset-8516639_1280.jpg');"></div>
+            <div class="slide" style="background-image: url('https://images.pexels.com/photos/585759/pexels-photo-585759.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');"></div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+            <div class="slide" style="background-image: url('purplePond.jpg');"></div>
+            <div class="slide" style="background-image: url('https://images.pexels.com/photos/130879/pexels-photo-130879.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');"></div>
+            <div class="slide" style="background-image: url('beachThree.jpg');"></div>
+            <div class="slide" style="background-image: url('https://plus.unsplash.com/premium_photo-1705477188192-29099708dcd8?q=80&w=1529&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+            <div class="slide" style="background-image: url('field.jpg');"></div>
+            <div class="slide" style="background-image: url('https://images.pexels.com/photos/371649/pexels-photo-371649.jpeg?auto=compress&cs=tinysrgb&w=800');"></div>
+            <div class="slide active" style="background-image: url('https://cdn.pixabay.com/photo/2017/02/26/19/42/beach-2101177_1280.jpg');"></div> 
+        
+       </div> 
+    </div> 
+
+    <div id="newEventModal">
+      <h2>New Event</h2>
+
+      <input id="eventTitleInput" placeholder="Event Title" />
+
+      <button id="saveButton">Save</button>
+      <button id="cancelButton">Cancel</button>
+    </div>
+
+    <div id="deleteEventModal">
+      <h2>Event</h2>
+
+      <p id="eventText"></p>
+
+      <button id="deleteButton">Delete</button>
+      <button id="closeButton">Close</button>
+    </div>
+
+    <div id="modalBackDrop"></div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+

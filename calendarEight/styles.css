@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Rouge+Script&display=swap');
+
+
+body {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-position: center center;
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+}
+
+/*
+.slide {
+  background-color: rgba(255, 255, 255, 0.5); 
+  background-blend-mode: multiply;
+  transition: opacity 1.5s ease;
+} */
+
+/*
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+} */
+
+.slide.active {
+  opacity: .3;
+  z-index: 50;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%; width: 100%;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay */
+  z-index: 2;
+}
+
+
+.slide {
+  position: relative;
+}
+
+.slide::before {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  z-index: -1;
+} 
+
+.animate {
+  -webkit-animation: animatezoom 1.2s;
+  animation: animatezoom 1.2s ease-in forwards;
+ }
+
+#header {
+  padding: 0.325em;
+  color: #fff;
+  font-family: 'Rouge Script', sans-serif;
+  font-size: 3.438rem;
+  text-shadow: 0rem 0.3rem 0.5rem rgba(0, 0, 0, 0.8); 
+  font-weight: bolder;
+  z-index: 500;
+}
+
+
+#header button {
+ background-color: transparent;
+ border: none;
+ color: #fff;
+ cursor: pointer;
+ font-weight: bolder;
+ font-size: x-large;
+ text-shadow: 0rem 0.3rem 0.5rem rgba(0, 0, 0, 0.8); 
+} 
+
+#monthDisplay {
+  text-align: center;
+}
+
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+} 
+
+
+.prev {
+  position: absolute;
+  left: 5.25em;
+  bottom: 1.75em;
+  z-index: 300;
+}
+
+.next {
+  position: absolute;
+  right: 3.75em;
+  bottom: 1.75em;
+  z-index: 300;
+} 
+
+#header p {
+  font-family: arial;
+  font-size: 0.813rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  word-spacing: 10px;
+  line-height: 5px;
+  text-align: center;
+}
+
+/*
+#container {
+  max-width: 100%;
+  width: 90%;
+  padding: 1rem;
+} */
+
+
+#weekdays {
+  width: 90%;
+  display: flex;
+  text-shadow: 0rem 0.3rem 0.5rem rgba(0, 0, 0, 1.0);
+  font-size: 1.375rem;
+  font-weight: bolder;
+  z-index: 500;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#weekdays div {
+  width: 100%;
+  padding: 0.625em;
+  margin: -1em 0em .2em 4.7em;
+  color: #fff;
+  text-align: center;
+  z-index: 500;
+}
+
+#calendar {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  opacity: 1;
+  z-index: 2000;
+}
+
+.day {
+  width: 10.5%;
+  padding: .8em 0em .1em .4em;
+  cursor: pointer;
+  box-sizing: border-box;
+  font-size: 1.45rem;
+  font-weight: bolder;
+  z-index: 1000;
+  background-color: transparent;
+  margin: .7% 1.8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7),
+  0 0 15px rgba(32, 32, 32, 0.8),
+  0 0 25px rgba(2, 2, 2, 0.6);
+  text-align: center;
+  /*text-shadow: 0rem 0.3rem 0.5rem rgba(0, 0, 0, 1.0); */
+  /*text-shadow: 0rem 0.3rem 0.5rem rgba(0, 0, 0, 0.8); */
+  /*text-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.8); */
+  /*text-shadow: 1px 2px 3px #333; */
+  position: relative;
+}
+
+.day:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.day + #currentDay {
+  background-color:rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+.day div {
+  width: calc(44.4rem / 7);
+  text-align: center;
+}
+
+.prev-date,
+.next-date {
+  opacity: 0.5;
+}
+
+
+.event {
+  font-size: 10px;
+  padding: 3px;
+  background-color: rgba(4, 100, 250, 0.4);
+  color: white;
+  border-radius: 5px;
+  max-height: 55px;
+  max-width: 30px;
+  overflow: hidden;
+  position: absolute;
+  bottom: 8px;
+}
+
+.padding {
+  cursor: default !important;
+  background-color: none;
+  box-shadow: none !important;
+} 
+
+#newEventModal, #deleteEventModal {
+  display: none;
+  z-index: 2000;
+  padding: 25px;
+  background-color: #e8f4fa;
+  box-shadow: 0px 0px 3px black;
+  border-radius: 5px;
+  width: 35%;
+  top: 150px;
+  left: calc(50% - 255px);
+  position: absolute;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+#eventTitleInput {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 3px gray;
+}
+#eventTitleInput.error {
+  border: 2px solid red;
+}
+#cancelButton, #deleteButton {
+  background-color: #18a8e5;
+  color: #fff;
+  border: none;
+  padding: 6px;
+}
+#saveButton, #closeButton {
+  background-color: #0d37f3;
+  color: #fff;
+  border: none;
+  padding: 6px;
+}
+#eventText {
+  font-size: 14px;
+}
+#modalBackDrop {
+  display: none;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(0,0,0,0.8);
+}
+
+@media (max-width: 600px) {
+
+  #container {
+    width: 80%;
+  }
+
+  #weekdays {
+    font-size: .825rem;
+  }
+
+  .prev {
+    position: absolute;
+    left: .2em;
+    bottom: 1.75em;
+  }
+  
+  .next {
+    position: absolute;
+    right: .2em;
+    bottom: 1.75em;
+  } 
+
+  .day {
+    font-size: 1.2rem;
+    padding: .8em 0em .5em .55em;
+  }
+
+  #newEventModal  {
+    left: calc(30% - 5%);
+  }
+
+  #deleteEventModal {
+    left: calc(50% - 105px);
+  }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+  #container {
+    width: 80%;
+  }
+
+  #weekdays {
+    font-size: 1rem;
+  }
+  
+  .day {
+    font-size: 1.4rem;
+    padding: .8em 0em .5em .55em;
+  }
+
+  #newEventModal  {
+    left: calc(50% - 155px);
+  }
+
+  #deleteEventModal {
+    left: calc(50% - 155px);
+  }
+
+}
+
+/*
+@media (min-width: 900px) and (max-width: 115px) {
+  #container {
+    width: 65%;
+  }
+
+  #weekdays {
+    font-size: 1.3rem;
+  }
+  
+  .day {
+    font-size: 1.6rem;
+    padding: .8em 0em .2  em .55em;
+  }
+
+  #newEventModal  {
+    left: calc(50% - 105px);
+  }
+
+  #deleteEventModal {
+    left: calc(50% - 105px);
+  }
+
+}
+*/
+
+/* https://cdn.pixabay.com/photo/2018/08/05/09/17/fields-3585202_1280.jpg */
+
+
+/* 
+
+without even realizing it, I have taken the bleame for Dad / other family member's / other people's bad 
+behavior.  They can't / won't come to terms with their bad behavior / flaws so they blame them on me.  Dad
+has anger management problems / lack of compassion.  I tell him not to drag River he tells me I am in a bad mood.
+Rather than actually try to develop compassion he goes to extremes to make people believe he is a kind compassionate
+person.  Same thing with his drawing class.  He is always trying to take the easy way out and get everyone else to 
+do the same.
+-Tournament Blvd
+*/
