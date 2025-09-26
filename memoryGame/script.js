@@ -163,4 +163,3 @@ new Timer(
 
 
 const flippedCard = document.querySelectorAll('.flip');
-

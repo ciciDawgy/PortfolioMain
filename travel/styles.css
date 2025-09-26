@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
 }
-/*
+
 .nav {
     display: flex;
     background-color: #000;
@@ -38,44 +38,10 @@
 } */
 
 
-.nav {
-    display: flex;
-    background-color: #000;
-    padding: 1.25em;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1;
-}
-
-.nav ul {
-    list-style: none;
-}
-
-.nav li a {
-    color: #fff;
-    text-decoration: none;
-    margin: 1.163em;
-    font-size: 1.25rem;
-    transform: translateX(5%);
-}
-
-.nav li:hover {
-    opacity: 0.8;
-    cursor: pointer;
-}
-
-.navbar {
-  display: flex;
-  margin-left: 32em;
-}
-
 .logo {
   font-weight: 900;
-  font-size: 4rem;
-  color: #000;
 }
+
 
 .main {
     width: 100vw;

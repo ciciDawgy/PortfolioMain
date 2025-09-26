@@ -47,7 +47,7 @@
     position: absolute;
     border-radius: 5px;
     background: rgb(2,0,36);
-    background: linear-gradient(86deg, rgba(2,0,36,1) 0%, rgba(40,18,170,1) 36%, rgba(0,212,255,1) 100%);
+background: linear-gradient(86deg, rgba(2,0,36,1) 0%, rgba(40,18,170,1) 36%, rgba(0,212,255,1) 100%);
     backface-visibility: hidden;
   }
   

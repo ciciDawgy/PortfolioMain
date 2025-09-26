@@ -81,6 +81,7 @@ planets.forEach(planet => {
         lightbox.style.display = 'flex';
     });
 }); */
+
 const planets = document.querySelectorAll('.planet');
 
 const planetData = {
@@ -125,110 +126,6 @@ const planetData = {
 // Create lightbox container
 const lightbox = document.createElement('div');
 lightbox.id = 'lightbox';
-document.body.appendChild(lightbox);
-
-// Create content box inside lightbox
-const contentBox = document.createElement('div');
-contentBox.id = 'content-box';
-lightbox.appendChild(contentBox);
-
-// Add image + name + info
-const img = document.createElement('img');
-contentBox.appendChild(img);
-
-const nameEl = document.createElement('h2');
-contentBox.appendChild(nameEl);
-
-const infoEl = document.createElement('p');
-contentBox.appendChild(infoEl);
-
-const style = document.createElement('style');
-style.innerHTML = `
-#lightbox {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,.8);
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    z-index: 1000;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease-in-out;
-}
-#lightbox.active {
-    opacity: 1;
-    pointer-events: auto;
-}
-#content-box {
-    background: transparent;
-    padding: 20px;
-    border-radius: 10px;
-    color: #fff;
-    max-width: 500px;
-    text-align: center;
-    position: relative;
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-height: 90vh;
-    transform: translateY(-150px) scale(0.9);
-    transition: transform 0.3s ease-in-out;
-    margin-top: 10vh;
-}
-#lightbox.active #content-box {
-    transform: translateY(0) scale(1);
-}
-#content-box img {
-    max-width: 50%;
-    border-radius: 50%;
-    float: left;
-    margin-right: 20px;
-}
-#content-box h2 {
-    font-size: 2rem;
-    margin-top: 1rem;
-    text-align: left;
-}
-#content-box p {
-    margin-top: 30px;
-    font-size: 1.2rem;
-    text-align: left;
-}
-`;
-document.head.appendChild(style);
-
-// Close lightbox when background is clicked
-lightbox.addEventListener('click', e => {
-    if (e.target === lightbox) {
-        lightbox.classList.remove('active');
-    }
-});
-
-// Show lightbox on planet click
-planets.forEach(planet => {
-    planet.addEventListener('click', () => {
-        const planetKey = planet.dataset.planet;
-        const data = planetData[planetKey];
-
-        const bg = window.getComputedStyle(planet).backgroundImage;
-        const match = bg.match(/url\(["']?(.*?)["']?\)/);
-        const imageUrl = match ? match[1] : '';
-
-        img.src = imageUrl;
-        nameEl.textContent = data.name;
-        infoEl.textContent = data.info;
-
-        lightbox.classList.add('active');
-    });
-});
-
-/*
-lightbox.id = 'lightbox';
 lightbox.style.position = 'fixed';
 lightbox.style.top = '0';
 lightbox.style.left = '0';
@@ -265,7 +162,7 @@ lightbox.appendChild(contentBox);
 const img = document.createElement('img');
 img.style.maxWidth = '50%';
 img.style.borderRadius = '50%';
-img.style.marginBottom = '0px'; 
+img.style.marginBottom = '20px'; 
 contentBox.appendChild(img);
 
 const nameEl = document.createElement('h2');
@@ -300,6 +197,6 @@ planets.forEach(planet => {
 
         lightbox.style.display = 'flex';
     });
-}); */
+});
 
 
