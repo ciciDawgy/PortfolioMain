@@ -1,0 +1,697 @@
+/* #fe4164; */
+ /*background-color: #231f2b;*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+nav {
+  margin: 1.9em 0;
+}
+
+nav ul li {
+    display: inline;
+    font-size: 1.25rem;
+    margin: 0em 1em;
+}
+
+nav a:hover {
+    /*color: #0d45ff; */
+    color: rgba(181, 234, 243, 0.97);
+    font-weight: 100;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 2rem;
+    margin-right: 17em;
+    letter-spacing: 2px;
+    margin-left: .5em;
+}
+
+body {
+    background-color: #231f2b;
+    color: white;
+    overflow-x: hidden;
+}
+
+.sectionOne {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15.625em;
+    margin: 6.15em 0em;
+    padding: 2em 0em;
+}
+
+.sectionOne h1 {
+    font-size: 2rem;
+    letter-spacing: 3px;
+}
+
+.sectionOne h3 {
+    margin-top: 3.125em;
+    line-height: 1.5;
+    letter-spacing: 3px;
+}
+
+.bigCircle {
+    background-image: linear-gradient(to right, #fff , #7a61ab);
+    width: 18.75em;
+    height: 18.75em;
+    margin-left: 2.5em;
+    border-radius: 50%;
+    position: relative;
+}
+
+.bigCircle img {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    width: 50%;
+}
+
+/*
+.fa-chevron-down {
+  margin: auto;
+} */
+/*
+.fa-solid {
+    font-size: 25px;
+    margin-top: 50px;
+    margin-left: 500px;
+}
+
+.fa-solid:hover  {
+    cursor: pointer;
+} */
+
+.btn {
+    background-color: #0d45ff;
+    padding: .3em .8em;
+    border-radius: 3px;
+    color: white;
+    text-decoration: none;
+}
+
+.btnBig {
+    background-color: #0d45ff;
+    position: absolute;
+    top: 70%;
+    padding: .8em 2.75em;
+    border-radius: 3px;
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    font-size: 1.2rem;
+    transition: all 1s ease;
+}
+
+.btnBig:hover {
+    padding: .8em 5em;
+    letter-spacing: 4.25px;
+}
+
+.sectionTwo {
+    background-color: #433e52;
+    border-bottom: 5px solid #0d45ff;
+}
+
+.sectionTwo .fas {
+    background-color: none;
+}
+
+
+.sectionThreeCategory {
+    position: relative;
+    padding: 25em;
+    margin: auto;
+}
+/*
+.sectionThree {
+    display: flex;
+    color: #fff;
+    background-color: #433e52;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 30px;
+}
+
+ .sectionThree i {
+    font-size: 50px;
+    padding-right: 100px;
+ }
+
+.sectionThree p {
+    line-height: 1.5;
+    font-size: 23px;
+    width: 50%; 
+}
+*/
+/*
+.sectionThree {
+    background-color: #433e52;
+    padding: 10% 20%;
+    width: 1500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
+
+
+.sectionThree {
+    background-color: #433e52;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6em;
+    padding: 8.5em;
+}
+
+.sectionThree p {
+    line-height: 1.5;
+    font-size: 1.25rem;
+}
+
+.sectionThree h2 {
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.sectionThree i {
+    padding-left: 45%;
+    padding-bottom: 10%;
+    font-size: 3.43rem;
+    text-align: center;
+}
+/*
+.sectionThree i {
+    margin-left: 150px;
+    font-size: 40px;
+} */
+
+/*
+.sectionThree div {
+    transform: translateX(-450px);
+    width: 70%;
+} */
+
+/*
+.sectionThree.fa-solid {
+    font-size: 25px;
+    margin-top: 50px;
+    margin-left: 0px;
+} */
+
+
+/*
+.sectionThree i {
+ transform: translate(-105px, -40px);
+    transform: translateX(-200px);
+} */
+
+/*
+.icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin-left: -420px;
+}
+
+.icons i {
+   font-size: 40px;
+} */
+
+.sectionFour {
+    width: 100%;
+    padding: 10em;
+    background-color:  #231f2b;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+}
+
+.sectionFour .partOne {
+    background-color: #bfbace; 
+    color:  #231f2b;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    font-size: 6rem;
+}
+
+/*
+.sectionFour .partTwo {
+    border-left: 7px solid #0d45ff;
+    height: 100%;
+} */
+
+
+.sectionFour .partTwo i {
+    position: absolute;
+    bottom: 1em;
+    right: 2.2em;
+    color: white;
+    font-size: 8rem;
+    opacity: .6;
+}
+
+/*
+.fa-music {
+    position: absolute;
+    top: 100px;
+    right: 58%;
+    font-size: 350px;
+    opacity: .5;
+    color: #fff;
+} */
+
+.sectionFive .partOne i {
+    position: absolute;
+    top: .5em;
+    left: 1.9em;
+    color: white;
+    font-size: 9.375rem;
+    opacity: .5;
+}
+
+
+/*
+.sectionFour i {
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+} */
+
+
+/* Section Five */
+.sectionFive {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+.sectionFive .partOne {
+    display: grid;
+    position: relative;
+    padding: 10em;
+} 
+
+.sectionFive .partTwo {
+    background-color: #bfbace;
+    color: #231f2b;
+}
+
+.sectionFive .partTwo p {
+    margin-bottom: 2.5em;
+}
+
+/*
+.sectionFive .partTwo .content a {
+    top: 5.5em;
+} */
+
+
+.content {
+    width: 80%;
+    margin: .7em auto;
+    line-height: 1.5;
+    text-align: center
+}
+
+.content h2 {
+    font-size: 1.5rem;
+    margin: 1.5em 0em;
+}
+
+.content p {
+    font-size: 1.2rem;
+    margin: -1.5em 0em;
+}
+
+.content a {
+    border: 1px solid #433e52;
+    padding: .5em 2em;
+    font-size: 1rem;
+    color: #433e52;
+    text-decoration: none;
+    transition: all 0.5s ease-in;
+}
+
+.content a:hover {
+    background-color: #433e52;
+    color: #fff;
+    text-shadow: none;
+} 
+
+
+.sectionSeven {
+    width: 100%;
+    background-color: #433e52;
+    font-size: 1.0rem;
+    position: relative;
+}
+
+/*
+.gridy {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 50px;
+    position: absolute;
+} */
+
+.gridy div {
+    display: flex;
+}
+
+.gridy h2 {
+    text-align: center;
+    margin: 50px auto;
+} 
+
+/*
+.gridy h3 {
+    transform: translate(400px, -200px);
+    font-size: 30px;
+} */
+
+
+.sectionSix {
+    background-image: -webkit-linear-gradient(70deg, #013A6B 50%, #004E95 50%); 
+    color: #fff;
+    width: 100%;
+    padding: 9em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6em;
+}
+
+.sectionSix p {
+    line-height: 1.5;
+    font-size: 1.25rem;
+}
+
+.sectionSix i {
+    padding-left: 45%;
+    padding-bottom: 10%;
+    font-size: 3.43rem;
+    text-align: center;
+}
+
+
+.sectionSix h2 {
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.footer {
+    background-color: black;
+    color: #fff;
+    line-height: 2.5;
+  }
+  
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3em 1.5em;
+    transform: translate(100px,-50px);
+  }
+  
+  .footer-center a:link,
+  .footer-center a:visited {
+    display: block;
+    color: var(--white);
+    font-size: 1rem;
+    transition: 0.6s;
+    margin-top: 1.6em;
+  } 
+  
+  .footer-center a:hover {
+    color: aqua;
+  }
+  
+  .footer-center h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 1.3em;
+    transform: translateX(-0px);
+  }
+
+  .follow {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin: 30px 0 30px;
+}
+
+
+@media (max-width: 500px) {
+
+     .logo {
+        position: absolute;
+        top:  0%;
+        left: 35%;
+        bottom: 10%;
+        margin-bottom: 80px;
+    }
+
+
+    nav ul li a + a {
+        position: absolute;
+        top: 80%;
+        left: 10%;
+    }
+
+
+    .btn {
+        background-color: none;
+        padding: .2em;
+        border-radius: 0px;
+        color: white;
+    }
+
+    .sectionOne {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sectionOne h1 {
+        font-size: 1.5rem;
+        letter-spacing: 6px;
+        display: block;
+        width: 100%;
+        margin-top: -60px;
+        text-align: center;
+    }
+
+    .bigCircle {
+        width: 18.75em;
+        height: 18.75em;
+        margin: 0 auto;
+        border-radius: 50%;
+        transform: translateY(-350px);
+    }
+
+    .btnBig {
+        position: absolute;
+        top: 135%;
+        width: 90%;
+        padding: .8em 2.75em;
+        border-radius: 3px;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-weight: bolder;
+        letter-spacing: 3px;
+        font-size: 1.2rem;
+        transition: all 1s ease;
+    }
+
+    .sectionOne h3 {
+        transform: translateY(22em);
+        line-height: 1.5;
+        letter-spacing: 3px;
+        margin: 2.5em 0em;
+    }
+
+    .sectionThree {
+        background-color: #433e52;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 6em;
+        padding: 4em;
+    }
+  
+    .sectionFour {
+        width: 100%;
+        padding: 10.5em;
+        background-color:  #231f2b;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        position: relative;
+    }
+
+    .sectionFour .partOne {
+        background-color: #bfbace; 
+        color:  #231f2b;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        font-size: 4rem;
+    }
+
+    .sectionFive {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .sectionFour .partTwo i {
+        position: absolute;
+        bottom: -1em;
+        right: 3.2em;
+        color: white;
+        font-size: 8rem;
+        opacity: .6;
+        display: none;
+    }
+    
+    
+    .sectionFive .partOne i {
+        position: absolute;
+        top: .5em;
+        left: 1.25em;
+        color: white;
+        font-size: 9.375rem;
+        opacity: .5;
+    }
+    
+    .sectionFour i {
+        color: white;
+        font-size: 50px;
+        position: absolute;
+        bottom: 30px;
+        right: 20px;
+    } 
+    
+    /*
+    .sectionFive .partOne {
+        display: grid;
+        position: relative;
+        padding: 10em;
+    } */
+    
+    .sectionFive .partTwo {
+        background-color: #bfbace;
+        color: #231f2b;
+        padding: 1.5em;
+    }
+    
+    .sectionFive .partTwo p {
+        margin-bottom: 2.5em;
+    }
+    
+    .content {
+        width: 80%;
+        margin: .3em auto;
+        line-height: 1.5;
+        text-align: center
+    }
+    
+    .content h2 {
+        font-size: 1.5rem;
+        margin: 1.5em 0em;
+    }
+
+    .sectionSix {
+        background-image: -webkit-linear-gradient(25deg, #013A6B 50%, #004E95 50%);
+        grid-template-columns: repeat(1, 1fr);
+        padding: 3em;
+    }
+
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 1em 0em;
+        transform: translate(40px,-30px);
+      }
+
+}
+
+@media (min-width: 505px) and (max-width: 765px) {
+
+
+        li {
+            color: rgb(0, 238, 255);
+        }
+
+        ul li {
+            margin-bottom: 4em;
+        }
+
+        body {
+            background-color: #ee29a3;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .logo {
+            position: absolute;
+            top: 0;
+            left: 35%;
+        }
+
+    }
+
+/*
+  If I always knew I was going to lose my family then what is the problem?
+  I always knew that it was a battle that I couldn't win because of free agency.  I guess I just wanted to give them a 
+  chance?  
+  Something not right about Lisa telling me that Mike named his daughter after Grandma.  That would be absurd.  Grandma liked
+  Grandma about as well as I did.  Grandma was the nastest to the two of us, and she was VERY nasty.  That would be an understatement
+  in my opinion.  Why would anyone name their child after someone like that?  I think what it is is that Dad got that idea from me telling
+  him that mom is a goof to believe that I would beliebe that one of her previous high school students would name their kids after Zane.  That
+  would be totally weird.  But even if it were true, why would they be telling me?  Probably because it isn't true.  
+*/
+
+
+
+/*
+Somatic Experiencing
+-Act in Faith -Just Do it
+-Practice mindfullness 
+-Meditation
+-Brain exercises / especially recall
+-Physical Exercise
+-Practice physical relaxation -be aware of your body
+-Visualization
+-Remind myself of the things I am proud of
+https://psychcentral.com/lib/somatic-therapy-exercises-for-trauma#takeaway
+-Helpful in combination with CBT
+
+*/
+
+/*
+Breakfast - 3 pieces of pizza - 3 Dr. Peppers - sooo tired today
+Lunch - a scoop of peanut butter and whipped cream and two almond joys
+
+*/
