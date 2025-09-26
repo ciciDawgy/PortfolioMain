@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+   overflow-x: hidden;
+}
+
+
+.nav {
+    display: flex;
+    background-color: #000;
+    padding: 1.25em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.nav ul {
+    list-style: none;
+}
+
+.nav li a {
+    color: #fff;
+    text-decoration: none;
+    margin: 1.163em;
+    font-size: 1.25rem;
+    transform: translateX(5%);
+}
+
+.nav li:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  margin-left: 32em;
+}
+
+.logo {
+  font-weight: 900;
+}
+
+.image {
+   width: 100%;
+   height: 600px;
+   position: fixed;
+   top: 0;
+   left: 0;
+   opacity: .1;
+   background: url('https://images.unsplash.com/photo-1473625247510-8ceb1760943f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=811&q=80');
+   background-repeat: no-repeat;
+   background-size: cover;
+ }
+ 
+.wrapper {
+   width: 100%;
+   height: 600px;
+   display: flex;
+}
+
+.wrapper .split {
+   width: 50%;
+}
+
+.wrapper .halfy {
+   width: 50%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   line-height: 1.5;
+   background-color: #f1f1f1;
+   padding: 2.5em;
+}
+
+.wrapper .halfy p {
+   line-height: 1.5;
+   font-family: 'Poppins', sans-serif;
+   font-size: 1.125rem;
+}
+
+.halfy a {
+   background-color: rgb(43, 168, 168);
+   color: #fff;
+   margin-top: 2.188em;
+   padding: 0.625em 2.188em;
+   text-decoration: none;
+   border-radius: 10px;
+   cursor: pointer;
+   font-weight: bolder;
+   transition: transform 0.3s ease;
+}
+
+.halfy a:hover {
+ transform: scale(0.95);
+}
+
+.halfy h3 {
+   margin: 1.25em 0;
+}
+
+ .wrapper {
+     transform: translateX(-1500px);
+     transition: transform 0.5s ease;
+ }
+
+ .wrapper:nth-of-type(even) {
+   transform: translateX(1500px);
+}
+
+.wrapper, .wrapper:nth-of-type(even) {
+   transition: transform 0.8s ease-in, opacity 1.5s ease-in;
+   opacity: 0;
+}
+
+
+
+.wrapper.show, .wrapper:nth-of-type(even).show {
+   transform: translateX(0);
+   opacity: 1;
+}
+
+@media (max-width: 600px) {
+  
+   .nav li a {
+      margin: .5em;
+      font-size: .9rem;
+  }
+  
+  .nav li:hover {
+      opacity: 0.8;
+      cursor: pointer;
+  }
+  
+  .navbar {
+    display: flex;
+    margin-left: 3em;
+  }
+
+  .wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+}
+
+   .wrapper .split {
+      width: 100%;
+      height: 100%;
+   }
+   
+   .wrapper .halfy {
+      width: 100%;
+      height: 100%;
+      padding: 2.5em;
+   }
+
+   .wrapper .halfy p {
+      line-height: 1.2;
+      font-family: 'Poppins', sans-serif;
+      font-size: .9rem;
+   }
+
+}
+
+
+/* chat gpt version */
+/*
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.logo {
+  font-weight: 900;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.nav li {
+  list-style: none;
+}
+
+.nav li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem;
+  transition: opacity 0.2s ease;
+}
+
+.nav li:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.image {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.1;
+  background: url('https://images.unsplash.com/photo-1473625247510-8ceb1760943f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=811&q=80')
+    no-repeat center center/cover;
+  z-index: 0;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 600px;
+  display: flex;
+  transform: translateX(-1500px);
+  transition: transform 0.8s ease-in, opacity 1.5s ease-in;
+  opacity: 0;
+  margin-top: 6rem;
+}
+
+.wrapper:nth-of-type(even) {
+  transform: translateX(1500px);
+}
+
+.wrapper.show,
+.wrapper:nth-of-type(even).show {
+  transform: translateX(0);
+  opacity: 1;
+}
+// commented out 
+/*
+.wrapper .split {
+  flex: 1;
+  object-fit: cover;
+} */
+/*
+.wrapper .split {
+   width: 50%;
+   height: 100%;
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+.wrapper .halfy {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f1f1;
+  padding: 2rem;
+  text-align: center;
+}
+
+.wrapper .halfy p {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+
+.halfy h3 {
+  margin: 1rem 0;
+}
+
+.halfy a {
+  background-color: rgb(43, 168, 168);
+  color: #fff;
+  padding: 0.625em 2.188em;
+  text-decoration: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.halfy a:hover {
+  transform: scale(0.95);
+}
+
+/* ----------- Responsive Breakpoints ----------- */
+
+/* Tablets */
+/*
+@media (max-width: 1024px) {
+  .wrapper {
+    flex-direction: column;
+    margin-top: 6rem;
+  }
+
+  .wrapper .split,
+  .wrapper .halfy {
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+  }
+
+  .image {
+    height: 100vh;
+  }
+} */
+
+/* Small tablets and large phones 
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .navbar {
+    justify-content: flex-start;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .nav li a {
+    font-size: 0.95rem;
+    padding: 0.25rem;
+  }
+
+  .wrapper .halfy p {
+    font-size: 1rem;
+  }
+
+  .halfy a {
+    font-size: 0.9rem;
+    padding: 0.5rem 1.5rem;
+  }
+} */
+
+/* Phones 
+@media (max-width: 480px) {
+  .nav li a {
+    font-size: 0.85rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .wrapper .halfy p {
+    font-size: 0.9rem;
+  }
+
+  .halfy a {
+    font-size: 0.8rem;
+    padding: 0.5rem 1.25rem;
+  }
+
+  https://www.realtor.com/apartments/Winchester_VA/type-townhome
+  https://www.realtor.com/rentals/details/290-Sage-Cir_Winchester_VA_22603_M97040-05577
+} */
+

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>17-Slide Autoplay Image Slider with Navigation Buttons</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="slider">
+    <!-- 17 slides -->
+    <div class="slides firstSlide fade">
+        <p>Welcome to the 7 Wonders of the world Tour!</p>
+    </div>
+    <div class="slides secondSlide fade Buckle">
+            <p>Buckle Up! Prepare for take off!</p>
+    </div>
+    <div class="slides fade">
+      <div class="fly">
+        <div class="infinite"></div> 
+        <img src="https://purepng.com/public/uploads/large/purepng.com-blue-planeplaneairplaneaeroplanefixed-wing-aircraftaircraftjet-enginepropeller-1701528465601acfhz.png" class="airplane">
+      </div>  
+    </div>
+    <div class="slides fade">
+      <div class="earthContainer">
+        <div class="earth">
+          <img src="https://purepng.com/public/uploads/large/purepng.com-blue-planeplaneairplaneaeroplanefixed-wing-aircraftaircraftjet-enginepropeller-1701528465601acfhz.png" class="airplaneOne">
+        </div>
+      </div> 
+    </div>
+    <div class="slides fade pyramids wonders">
+      <h2>Pyramids</h2>  
+    </div>
+    <div class="slides fade">
+        <div class="earthContainer">
+            <div class="earth">
+              <img src="https://purepng.com/public/uploads/large/purepng.com-blue-planeplaneairplaneaeroplanefixed-wing-aircraftaircraftjet-enginepropeller-1701528465601acfhz.png" class="airplaneOne">
+            </div>
+        </div> 
+    </div>
+    <div class="slides fade wallChina wonders">
+        <h2>Wall Of China</h2> 
+    </div>
+    <div class="slides fade">
+        <div class="earthContainer">
+            <div class="earth">
+              <img src="https://purepng.com/public/uploads/large/purepng.com-blue-planeplaneairplaneaeroplanefixed-wing-aircraftaircraftjet-enginepropeller-1701528465601acfhz.png" class="airplaneOne">
+            </div>
+        </div> 
+    </div>
+    <div class="slides fade chichen wonders">   
+        <h2>Chichén Itzá</h2>
+    </div>
+    <div class="slides fade">
+        <div class="earthContainer">
+            <div class="earth">
+              <img src="https://purepng.com/public/uploads/large/purepng.com-blue-planeplaneairplaneaeroplanefixed-wing-aircraftaircraftjet-enginepropeller-1701528465601acfhz.png" class="airplaneOne">
+            </div>
+        </div> 
+    </div>
+    <div class="slides fade machu wonders">
+        <h2>Machu Picchu</h2>
+    </div>
+    <div class="slides fade">
+        <div class="earthContainer">
+            <div class="earth">
+              <img src="https://purepng.com/public/uploads/large/purepng.com-blue-planeplaneairplaneaeroplanefixed-wing-aircraftaircraftjet-enginepropeller-1701528465601acfhz.png" class="airplaneOne">
+            </div>
+        </div> 
+    </div>
+    <div class="slides fade statue wonders">
+        <h2>Christ the Redeemer</h2>
+    </div>
+    <div class="slides fade">
+        <div class="earthContainer">
+            <div class="earth">
+              <img src="https://purepng.com/public/uploads/large/purepng.com-blue-planeplaneairplaneaeroplanefixed-wing-aircraftaircraftjet-enginepropeller-1701528465601acfhz.png" class="airplaneOne">
+            </div>
+        </div> 
+    </div>
+    <div class="slides fade collosseum wonders">
+        <h2>Colosseum</h2>
+    </div>
+    <div class="slides fade">
+        <div class="earthContainer">
+            <div class="earth">
+              <img src="https://purepng.com/public/uploads/large/purepng.com-blue-planeplaneairplaneaeroplanefixed-wing-aircraftaircraftjet-enginepropeller-1701528465601acfhz.png" class="airplaneOne">
+            </div>
+        </div> 
+    </div>
+    <div class="slides fade taj wonders">
+        <h2>Taj Mahal</h2>
+    </div>
+
+    <!-- Navigation buttons -->
+        <a class="prev" onclick="plusSlides(-1)">
+            <i class="fas fa-chevron-left"></i>
+        </a>
+        <a class="next" onclick="plusSlides(1)">
+            <i class="fas fa-chevron-right"></i> 
+        </a>
+    <!--<a class="arrowLeft">
+        <i class="fas fa-chevron-left"></i>
+    </a>
+     <a class="arrowRight">
+        <i class="fas fa-chevron-right"></i> 
+     </a> -->
+     <!--
+     &#10094;
+     &#10095;
+    -->
+    <!-- Dots for manual navigation -->
+    <div class="dots-container">
+      <span class="dot" onclick="currentSlide(0)"></span>
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
+      <span class="dot" onclick="currentSlide(7)"></span>
+      <span class="dot" onclick="currentSlide(8)"></span>
+      <span class="dot" onclick="currentSlide(9)"></span>
+      <span class="dot" onclick="currentSlide(10)"></span>
+      <span class="dot" onclick="currentSlide(11)"></span>
+      <span class="dot" onclick="currentSlide(12)"></span>
+      <span class="dot" onclick="currentSlide(13)"></span>
+      <span class="dot" onclick="currentSlide(14)"></span>
+      <span class="dot" onclick="currentSlide(15)"></span>
+      <span class="dot" onclick="currentSlide(16)"></span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

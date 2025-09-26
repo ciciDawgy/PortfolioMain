@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>TV</title>
+</head>
+<body>
+    <!--can do overflow hidden with TV screen to make it bigger.  Then to scroll use translate y/ remote.  One of the 
+    channels can put my mario animation in there.  Maybe do a couple of those -->
+    <!--https://cdn.pixabay.com/photo/2020/11/16/17/46/tv-5749745_1280.png-->
+    <!--https://www.seekpng.com/png/full/4-44896_old-tv-png-80s-tv-png.png-->
+    <!--https://www.youtube.com/watch?v=srv5p791Am8--> <!--how to move rows/tables-->
+    <div class="tv"></div>
+
+    <div class="homeMenu"></div>  <!--Don't think this is doing anything-->
+    
+    <iframe src="" class="vid" name="page"></iframe>
+
+    <div class="selectBox"></div>
+
+    <!--remote control-->
+    <div class="remote">
+      <div class="remote-top">
+            <i class="fas fa-chevron-up" onclick="upNdown(up)"></i>
+            <i class="fas fa-chevron-right"></i>
+            <i class="fas fa-chevron-down" onclick="upNdown(down)"></i>
+            <i class="fas fa-chevron-left"></i>
+            <!--<button onclick="upNdown(up);"></button>
+            <button onclick="upNdown(down);"></button>-->
+            <div class="ok">ok</div>
+        </div>
+        <div>
+            <i class="fa-solid fa-forward"></i>
+            <i class="fa-solid fa-backward"></i>
+        </div>
+        <div class="remote-bottom">
+            <i class="fas fa-play"></i>
+            <i class="fas fa-stop"></i>
+            <i class="fas fa-pause"></i>
+        </div>
+        <i class="fas fa-power-off"></i>
+        <i class="fas fa-home"></i>
+    </div>
+
+
+    <!--Opening-->
+
+    <table class="tvGuide" width="400" height="400" id="table"> <!--need page?-->
+        <tr class="channel tvHead"></tr> <!--doesn't look like tvhead is doing anything-->
+        <tr>
+            <th>The Animal Planet</th>
+            <td>
+                <!--<div class="selectBox"></div>-->
+                <a href="https://www.youtube.com/embed/spo_t1zKd6A" target="page">Pit Bulls and Parolees
+                   <!-- <video width="0" height="0">
+                        <source src="https://www.youtube.com/embed/spo_t1zKd6A" target='page'>
+                    </video> -->
+                </a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/RFj4BqQjjU4" target="page">River Monsters</a>
+            </td>
+            <td>
+               <a href="https://www.youtube.com/embed/TPSaacHWbMg" target="page">Too Cute</a> 
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/kI4EbABtJQ0" target="page">Dogs 101</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/15_1X5SCVIU"  target="page">The Jeff Corwin Experienc</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/LLyZR7eAWnA" target="page">Weird, True & Freaky</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/kI4EbABtJQ0" target="page">Dogs 101</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/15_1X5SCVIU"  target="page">The Jeff Corwin Experienc</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/LLyZR7eAWnA" target="page">Weird, True & Freaky</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/kI4EbABtJQ0" target="page">Dogs 101</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/15_1X5SCVIU"  target="page">The Jeff Corwin Experienc</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/LLyZR7eAWnA" target="page">Weird, True & Freaky</a>
+            </td>
+        </tr>
+        <tr class="channel">
+            <th>HGTV</th>
+             <td>
+                 <a href="https://www.youtube.com/embed/vVKWxCUJ6P0" target="page">Home Town</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/Y6C9g6LtGm0" target="page">Love It Or List It</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/r5RjfzJHjSk" target="page">Flip or Flop</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/Yb1wP2GefBw" target="page">House Hunters</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/l1_VupbHIDA" target="page">Fixxer Upper</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/dg2h2riKPmE" target="page">My Lottery Dream House</a>
+             </td>
+             <td>
+                <a href="https://www.youtube.com/embed/vVKWxCUJ6P0" target="page">Home Town</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/Y6C9g6LtGm0" target="page">Love It Or List It</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/r5RjfzJHjSk" target="page">Flip or Flop</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/Yb1wP2GefBw" target="page">House Hunters</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/l1_VupbHIDA" target="page">Fixxer Upper</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/dg2h2riKPmE" target="page">My Lottery Dream House</a>
+            </td>
+         </tr>
+         <tr class="channel">
+            <th>Cartoon Network</th>
+             <td>
+                 <a href="https://www.youtube.com/embed/cqyziA30whE" target="page">Tom and Jerry</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/xPZ4od9Kn98" target="page">Johnny Bravo</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/jHqKoLZDzms" target="page">Scooby Doo</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/B0XbTgV9Dcc" target="page">Dexter’s Laboratory</a>
+                 </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/Wj5WBIeH03I" target="page">Powerpuff Girls</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/AsMXqJjn4pc" target="page">Pinky and The Brain</a>
+             </td>
+             <td>
+                <a href="https://www.youtube.com/embed/cqyziA30whE" target="page">Tom and Jerry</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/xPZ4od9Kn98" target="page">Johnny Bravo</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/jHqKoLZDzms" target="page">Scooby Doo</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/B0XbTgV9Dcc" target="page">Dexters Laboratory</a>
+                </td>
+            <td>
+                <a href="https://www.youtube.com/embed/Wj5WBIeH03I" target="page">Powerpuff Girls</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/AsMXqJjn4pc" target="page">Pinky and The Brain</a>
+            </td>
+         </tr>
+         <tr class="channel">
+            <th>ABC</th>
+             <td>
+                 <a href="https://www.youtube.com/embed/wU90dfDDUiQ" target="page">America's Funniest Videos</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/nn-uMBLuTk0" target="page">Shark Tank</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/Zp6YQyLHhW8" target="page">Who Wants To Be A Millionaire</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/ETibo0tkDYw" target="page">The Wheel Of Fortune</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/T7EzC3u2mLs" target="page">Jeopardy</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/9_hrhSLYyxg" target="page">Celebrity Family Feud</a>
+             </td>
+             <td>
+                <a href="https://www.youtube.com/embed/wU90dfDDUiQ" target="page">America's Funniest Videos</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/nn-uMBLuTk0" target="page">Shark Tank</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/Zp6YQyLHhW8" target="page">Who Wants To Be A Millionaire</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/ETibo0tkDYw" target="page">The Wheel Of Fortune</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/T7EzC3u2mLs" target="page">Jeopardy</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/9_hrhSLYyxg" target="page">Celebrity Family Feud</a>
+            </td>
+         </tr>
+         <tr class="channel">
+            <th>Food Network</th>
+             <td>
+                 <a href="https://www.youtube.com/embed/ioqkeH5BET0" target="page">Diners, Drive-Ins, and Dives</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/g8s6fDf2Axk" target="page">Chopped</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/RllWJUvrxEY" target="page">Good Eats</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/yVp9QteuveQ" target="page">Beat Bobby Flay</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/Rc6NkFP2awY" target="page">Iron Chef America</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/bR_nQaDIs_g" target="page">The Pioneer Woman</a>
+             </td>
+             <td>
+                <a href="https://www.youtube.com/embed/ioqkeH5BET0" target="page">Diners, Drive-Ins, and Dives</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/g8s6fDf2Axk" target="page">Chopped</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/RllWJUvrxEY" target="page">Good Eats</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/yVp9QteuveQ" target="page">Beat Bobby Flay</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/Rc6NkFP2awY" target="page">Iron Chef America</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/bR_nQaDIs_g" target="page">The Pioneer Woman</a>
+            </td>
+         </tr>
+         <tr class="channel">
+            <th>ESPN</th>
+             <td>
+                 <a href="https://www.youtube.com/embed/oVyNkoMQwyI" frameborder="0" target="page">The Last Dance</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/zUK9AoucTLA" target="page">First Take</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/tBmeRb7uTEM" target="page">College Football</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/IapFDyd6X9M" target="page">Baseball </a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/iHfZrev_Joc" target="page">College Basketball</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/2uxWs14f8To" target="page">College Baseball</a>
+             </td>
+             <td>
+                <a href="https://www.youtube.com/embed/oVyNkoMQwyI" target="page">The Last Dance</a> <!--frameborder="0"-->
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/zUK9AoucTLA" target="page">First Take</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/tBmeRb7uTEM" target="page">College Football</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/IapFDyd6X9M" target="page">Baseball </a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/iHfZrev_Joc" target="page">College Basketball</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/2uxWs14f8To" target="page">College Baseball</a>
+            </td>
+         </tr>
+         <tr class="channel">
+            <th>FOX</th>
+             <td>
+                 <a href="https://www.youtube.com/embed/tdKjI_5F4rw" target="page">American Idol</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/rGQkLXIey4Y" target="page">The Simpsons</a>
+                </td>
+             <td>
+                <a href="https://www.youtube.com/embed/q_5z22SNMXg" target="page"> So You Think You Can Dance?</a>
+             </td>
+             <td>
+                <a href="https://www.youtube.com/embed/v6v6xXXQuO0" target="page">King of The Hill</a> 
+                </td>
+             <td>
+               <a href="https://www.youtube.com/embed/VH5Yffh4zkw" target="page">Bob's Burgers</a>
+             </td>
+             <td> 
+                 <a href="https://www.youtube.com/embed/s6RfEJOh2Uw" target="page">Malcom In The Middle</a>
+             </td>
+             <td>
+                <a href="https://www.youtube.com/embed/tdKjI_5F4rw" target="page">American Idol</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/rGQkLXIey4Y" target="page">The Simpsons</a>
+               </td>
+            <td>
+               <a href="https://www.youtube.com/embed/q_5z22SNMXg" target="page"> So You Think You Can Dance?</a>
+            </td>
+            <td>
+               <a href="https://www.youtube.com/embed/v6v6xXXQuO0" target="page">King of The Hill</a> 
+               </td>
+            <td>
+              <a href="https://www.youtube.com/embed/VH5Yffh4zkw" target="page">Bob's Burgers</a>
+            </td>
+            <td> 
+                <a href="https://www.youtube.com/embed/s6RfEJOh2Uw" target="page">Malcom In The Middle</a>
+            </td>
+         </tr>
+    </table>
+        <button onclick="upNdown(up)" class="fas fa-chevron-up"></button>
+        <button onclick="upNdown(down)" class="fas fa-chevron-down"></button>
+
+     
+
+     <!--<section class="bg"></section>-->
+     <div class="loading-text">0%</div>
+
+      <script src="script.js"></script>
+</body>
+</html>

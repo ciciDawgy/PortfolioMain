@@ -1,0 +1,256 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+body {
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.nav {
+    display: flex;
+    background-color: #000;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.nav ul {
+    list-style: none;
+}
+
+.nav li a {
+    color: #fff;
+    text-decoration: none;
+    margin: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+
+.nav li:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+
+.navbar {
+  display: flex;
+  margin-left: 600px;
+  align-items: center;
+} 
+
+.logo {
+  font-weight: 900;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tabs button {
+    background-color: rgb(0, 140, 255);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 35px;
+    cursor: pointer;
+    margin: 100px 10px 35px 10px;
+}
+
+.tabs button:hover {
+    background-color: #ddd;
+    color: #000;
+    transition: all 0.3s;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    border-top: none;
+    opacity: 0;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    position: absolute;
+    left: 20%;
+    width: 100%;
+}
+
+.tabcontent h3 {
+    margin: 0 auto;
+}
+
+.tabcontent img {
+    width: 250px;
+    height: 250px;
+}
+
+
+.from-left {
+    transform: translateX(-100%);
+}
+
+.from-right {
+    transform: translateX(100%);
+}
+
+.active-tab {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.btnBtn {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 30px;
+    background-color: rgb(0, 140, 255);
+    color: #fff;
+    font-weight: bolder;
+    position: absolute;
+    bottom: 50px;
+    left: 27%;
+    cursor: pointer;
+    transition: padding 0.3s ease;
+    text-decoration: none;
+}
+
+.btnBtn:hover {
+    padding: 8px 18px;
+}
+
+
+.contentLeft {
+    text-align: center;
+    margin: 10px 0px;
+    transform: translateX(-20%);
+}
+
+.contentRight {
+    width: 450px;
+}
+
+.contentRight img {
+    margin: 20px 40%;
+    width: 100%;
+}
+
+p {
+    margin-top: 1%;
+    line-height: 1.5;
+}
+
+
+@media (max-width: 600px) {
+    .tabs button {
+        padding: 7px 20px;
+        margin: 80px 10px -70px 10px;
+        background-color: red;
+}
+
+    .contentRight {
+        width: 100%;
+    }
+
+    /*
+    .contentRight img {
+        margin: -200px 0%;
+        width: 100%;
+    } */
+
+    
+      .contentRight img {
+             margin: 0 auto;
+             width: 100%;
+           }
+ 
+    p {
+        font-size: .8rem;
+    }
+
+    .tabcontent {
+        top: 25%;
+    }
+
+    .btnBtn {
+        left: 20%;
+    }
+
+}
+
+    @media (max-width: 824px) {
+         .tabs button {
+             padding: 7px 20px;
+             background-color: #000;
+             margin: 80px 10px -70px 10px;
+         }
+
+         .tabcontent {
+            top: 25%;
+         }
+          /*
+          .contentRight img {
+               margin: 20px -20%;
+               width: 100%;
+           }
+           */
+
+           .contentRight img {
+             margin: 0 auto;
+             width: 100%;
+           }
+
+    }
+
+    @media (max-width: 1150px) {
+             
+           .tabs button {
+             padding: 7px 20px;
+             background-color: #000;
+             margin: 80px 10px -70px 10px;
+         }
+
+          .contentRight img {
+             margin: 0 auto;
+             width: 100%;
+           }
+    }
+
+
+
+/*
+
+-Inova appointment on 6/2
+-Incfile
+-CC
+-Mcafee
+-emails
+-news
+-dailies
+-situps 
+-change lb and sd 
+-mail - documents 
+-check BA 
+-check cs  
+-Xf
+
+-Dad is definitely messing with my computer.  Reading my scriptures this morning and the words were changed  - to dumb it down or something I think was the idea.  
+-Had to take miralax today
+-way they talk about .....
+-I really do need to read more.  After I have read a chapter I can't remember what I have read.  I need to meditate to keep my mind calm.  
+-Take a dance step, aligator and bunny, do they know what they are doing, most people want to assume others are good but there are many who are not.  Empaths can't understand not having empathy.  Data gathering.  Let in on information / sensitive information.  Intentional vs non-intentional.  They get better as they learn how to manipulate.  
+-Crisis reveals character.  How do they treat people / people in service jobs / animals?  Can they take feedback?   
+https://www.indeed.com/jobs?q=HTML+CSS+Javascript&l=Remote&from=searchOnDesktopSerp&vjk=86a6bf170ef13e9d 
+
+*/

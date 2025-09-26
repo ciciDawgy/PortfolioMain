@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="progress.css" />
+    <link rel="stylesheet" href="styles.css">
+    <title>TV Three</title>
+</head>
+<body>
+    <!--can do overflow hidden with TV screen to make it bigger.  Then to scroll use translate y/ remote.  One of the 
+    channels can put my mario animation in there.  Maybe do a couple of those -->
+    <!--https://www.youtube.com/watch?v=srv5p791Am8--> <!--how to move rows/tables-->
+    <div class="tv"></div>
+
+    <!--<div class="homeMenu"></div> -->  <!--Don't think this is doing anything-->
+    
+    <iframe src="" class="vid" id="video" name="page"></iframe> 
+   
+    <!--<div class="controls">
+        <button class="btn" id="play">
+          <i class="fa fa-play fa-2x"></i>
+        </button>
+        <button class="btn" id="stop">
+          <i class="fa fa-stop fa-2x"></i>
+        </button>
+        <input
+        type="range"
+        id="progress"
+        class="progress"
+        min="0"
+        max="100"
+        step="0.1"
+        value="0"
+        />
+        <span class="timestamp" id="timestamp">00:00</span>
+    </div> -->
+
+
+    <!--remote control-->
+    <div class="remote">
+      <div class="remote-top">
+            <i class="fas fa-chevron-up" onclick="upNdown(up)"></i>
+            <i class="fas fa-chevron-right"></i>
+            <i class="fas fa-chevron-down" onclick="upNdown(down)"></i>
+            <i class="fas fa-chevron-left"></i>
+    
+            <div class="ok">ok</div>
+        </div>
+        <div>
+            <i class="fa-solid fa-forward"></i>
+            <i class="fa-solid fa-backward"></i>
+        </div>
+        <div class="remote-bottom">
+            <i class="fas fa-play"></i>
+            <i class="fas fa-stop"></i>
+            <i class="fas fa-pause"></i>
+        </div>
+        <i class="fas fa-power-off"></i>
+        <i class="fas fa-home"></i>
+    </div>
+
+    <!--<button onclick="myFunction()">Click</button> -->
+
+    <div class="selected"></div>
+
+    <!--Opening-->
+
+    <table class="tvGuide" width="400" height="400" id="table"> <!--need page?-->
+        <tr class="tvHead"></tr>
+        <tr>
+            <th>The Animal Planet</th>
+            <td class="selected"> 
+                <!--<div class="selected"></div> -->
+                <a href="https://www.youtube.com/embed/spo_t1zKd6A" onclick="openlink(this)" target="page">The Jeff Corwin Experience
+                   <!-- <video width="0" height="0">
+                        <source src="https://www.youtube.com/embed/spo_t1zKd6A" target='page'>
+                    </video> -->
+                </a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/RFj4BqQjjU4?rel=0" target="page" muted>The Jeff Corwin Experience</a>
+            </td>
+            <td>
+               <a href="https://www.youtube.com/embed/TPSaacHWbMg?rel=0" target="page" muted>The Jeff Corwin Experience</a> 
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/kI4EbABtJQ0?rel=0" target="page">The Jeff Corwin Experience</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/15_1X5SCVIU?rel=0"  target="page">The Jeff Corwin Experience</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/LLyZR7eAWnA?rel=0" target="page">The Jeff Corwin Experience</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/kI4EbABtJQ0?rel=0" target="page">The Jeff Corwin Experience</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/15_1X5SCVIU?rel=0"  target="page">The Jeff Corwin Experience</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/LLyZR7eAWnA?rel=0" target="page">The Jeff Corwin Experience</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/kI4EbABtJQ0?rel=0" target="page">The Jeff Corwin Experience</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/15_1X5SCVIU?rel=0"  target="page">The Jeff Corwin Experience</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/LLyZR7eAWnA?rel=0" target="page">The Jeff Corwin Experience</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/LLyZR7eAWnA?rel=0" target="page">The Jeff Corwin Experience</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/LLyZR7eAWnA?rel=0" target="page">The Jeff Corwin Experience</a>
+            </td>
+        </tr>
+        <tr>
+            <th>The Animal Planet</th>
+             <td>
+                 <a href="https://www.youtube.com/embed/vVKWxCUJ6P0?rel=0" target="page">Home Town</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/dOXaEu8WW6I?rel=0" target="page">Love It Or List It</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/r5RjfzJHjSk?rel=0" target="page">Flip or Flop</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/AjQ0q4_NMFE?rel=0" target="page">House Hunters</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/l1_VupbHIDA?rel=0" target="page">Fixxer Upper</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/dg2h2riKPmE?rel=0" target="page">My Lottery Dream House</a>
+             </td>
+             <td>
+                <a href="https://www.youtube.com/embed/vVKWxCUJ6P0?rel=0" target="page">Home Town</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/dOXaEu8WW6I?rel=0" target="page">Love It Or List It</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/r5RjfzJHjSk?rel=0" target="page">Flip or Flop</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/AjQ0q4_NMFE?rel=0" target="page">House Hunters</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/l1_VupbHIDA?rel=0" target="page">Fixxer Upper</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/dg2h2riKPmE?rel=0" target="page">My Lottery Dream House</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/l1_VupbHIDA?rel=0" target="page">Fixxer Upper</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/dg2h2riKPmE?rel=0" target="page">My Lottery Dream House</a>
+            </td>
+         </tr>
+         <tr>
+            <th>The Animal Planet</th>
+             <td>
+                 <a href="https://www.youtube.com/embed/cqyziA30whE?rel=0" target="page">Tom and Jerry</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/xPZ4od9Kn98?rel=0" target="page">Johnny Bravo</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/u6hzJEWySO0" target="page">Scooby Doo</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/Ya3Q9OLk25g?rel=0" target="page">Dexter’s Laboratory</a>
+                 </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/Wj5WBIeH03I?rel=0" target="page">Powerpuff Girls</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/AsMXqJjn4pc?rel=0" target="page">Pinky and The Brain</a>
+             </td>
+             <td>
+                <a href="https://www.youtube.com/embed/cqyziA30whE?rel=0" target="page">Tom and Jerry</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/xPZ4od9Kn98?rel=0" target="page">Johnny Bravo</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/u6hzJEWySO0?rel=0" target="page">Scooby Doo</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/Ya3Q9OLk25g?rel=0" target="page">Dexters Laboratory</a>
+                </td>
+            <td>
+                <a href="https://www.youtube.com/embed/Wj5WBIeH03I?rel=0" target="page">Powerpuff Girls</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/AsMXqJjn4pc?rel=0" target="page">Pinky and The Brain</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/l1_VupbHIDA?rel=0" target="page">Fixxer Upper</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/dg2h2riKPmE?rel=0" target="page">My Lottery Dream House</a>
+            </td>
+         </tr>
+         <tr>
+            <th>The Animal Planet</th>
+             <td>
+                 <a href="https://www.youtube.com/embed/n2RReKPC7sE?rel=0" target="page">America's Funniest Videos</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/nn-uMBLuTk0?rel=0" target="page">Shark Tank</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/Zp6YQyLHhW8?rel=0" target="page">Who Wants To Be A Millionaire</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/BVCqXl8qhqA?rel=0" target="page">The Wheel Of Fortune</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/QH1BfIFpDy8?rel=0" target="page">Jeopardy</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/9_hrhSLYyxg?rel=0" target="page">Celebrity Family Feud</a>
+             </td>
+             <td>
+                <a href="https://www.youtube.com/embed/n2RReKPC7sE?rel=0" target="page">America's Funniest Videos</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/nn-uMBLuTk0?rel=0" target="page">Shark Tank</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/Zp6YQyLHhW8?rel=0" target="page">Who Wants To Be A Millionaire</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/BVCqXl8qhqA?rel=0" target="page">The Wheel Of Fortune</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/QH1BfIFpDy8?rel=0" target="page">Jeopardy</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/9_hrhSLYyxg?rel=0" target="page">Celebrity Family Feud</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/l1_VupbHIDA?rel=0" target="page">Fixxer Upper</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/dg2h2riKPmE?rel=0" target="page">My Lottery Dream House</a>
+            </td>
+         </tr>
+         <tr>
+            <th>The Animal Planet</th>
+             <td>
+                 <a href="https://www.youtube.com/embed/ioqkeH5BET0?rel=0" target="page">Diners, Drive-Ins, and Dives</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/g8s6fDf2Axk?rel=0" target="page">Chopped</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/RllWJUvrxEY?rel=0" target="page">Good Eats</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/yVp9QteuveQ?rel=0" target="page">Beat Bobby Flay</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/_ve5tIs4VGg?rel=0" target="page">Iron Chef America</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/bR_nQaDIs_g?rel=0" target="page">The Pioneer Woman</a>
+             </td>
+             <td>
+                <a href="https://www.youtube.com/embed/ioqkeH5BET0?rel=0" target="page">Diners, Drive-Ins, and Dives</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/g8s6fDf2Axk?rel=0" target="page">Chopped</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/RllWJUvrxEY?rel=0" target="page">Good Eats</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/yVp9QteuveQ?rel=0" target="page">Beat Bobby Flay</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/_ve5tIs4VGg?rel=0" target="page">Iron Chef America</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/bR_nQaDIs_g?rel=0" target="page">The Pioneer Woman</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/l1_VupbHIDA?rel=0" target="page">Fixxer Upper</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/dg2h2riKPmE?rel=0" target="page">My Lottery Dream House</a>
+            </td>
+         </tr>
+         <tr>
+            <th>The Animal Planet</th>
+             <td>
+                 <a href="https://www.youtube.com/embed/oVyNkoMQwyI?rel=0" frameborder="0" target="page">The Last Dance</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/zUK9AoucTLA?rel=0" target="page">First Take</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/tBmeRb7uTEM?rel=0" target="page">College Football</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/YU9C1Y4mc_g?rel=0" target="page">Baseball </a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/y9IYkNhs_cg?rel=0" target="page">College Basketball</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/2uxWs14f8To?rel=0" target="page">College Baseball</a>
+             </td>
+             <td>
+                <a href="https://www.youtube.com/embed/oVyNkoMQwyI?rel=0" target="page">The Last Dance</a> <!--frameborder="0"-->
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/zUK9AoucTLA?rel=0" target="page">First Take</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/tBmeRb7uTEM?rel=0" target="page">College Football</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/YU9C1Y4mc_g?rel=0" target="page">Baseball </a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/y9IYkNhs_cg?rel=0" target="page">College Basketball</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/2uxWs14f8To?rel=0" target="page">College Baseball</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/l1_VupbHIDA?rel=0" target="page">Fixxer Upper</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/dg2h2riKPmE?rel=0" target="page">My Lottery Dream House</a>
+            </td>
+         </tr>
+         <tr>
+            <th>The Animal Planet</th>
+             <td>
+                 <a href="https://www.youtube.com/embed/tdKjI_5F4rw?rel=0" target="page">American Idol</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/rGQkLXIey4Y?rel=0" target="page">The Simpsons</a>
+                </td>
+             <td>
+                <a href="https://www.youtube.com/embed/q_5z22SNMXg?rel=0" target="page"> So You Think You Can Dance?</a>
+             </td>
+             <td>
+                <a href="https://www.youtube.com/embed/2x6mRH87P_U?rel=0" target="page">King of The Hill</a> 
+                </td>
+             <td>
+               <a href="https://www.youtube.com/embed/rQtgrow4MY8?rel=0" target="page">Bob's Burgers</a>
+             </td>
+             <td> 
+                 <a href="https://www.youtube.com/embed/HvMvLFN_5bk?rel=0" target="page">Malcom In The Middle</a>
+             </td>
+             <td>
+                <a href="https://www.youtube.com/embed/tdKjI_5F4rw?rel=0" target="page">American Idol</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/rGQkLXIey4Y?rel=0" target="page">The Simpsons</a>
+               </td>
+            <td>
+               <a href="https://www.youtube.com/embed/q_5z22SNMXg?rel=0" target="page"> So You Think You Can Dance?</a>
+            </td>
+            <td>
+               <a href="https://www.youtube.com/embed/2x6mRH87P_U?rel=0" target="page">King of The Hill</a> 
+               </td>
+            <td>
+              <a href="https://www.youtube.com/embed/rQtgrow4MY8?rel=0" target="page">Bob's Burgers</a>
+            </td>
+            <td> 
+                <a href="https://www.youtube.com/embed/HvMvLFN_5bk?rel=0" target="page">Malcom In The Middle</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/l1_VupbHIDA?rel=0" target="page">Fixxer Upper</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/dg2h2riKPmE?rel=0" target="page">My Lottery Dream House</a>
+            </td>
+         </tr>
+         <tr>
+            <th>The Animal Planet</th>
+             <td>
+                 <a href="https://www.youtube.com/embed/tdKjI_5F4rw?rel=0" target="page">American Idol</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/rGQkLXIey4Y?rel=0" target="page">The Simpsons</a>
+                </td>
+             <td>
+                <a href="https://www.youtube.com/embed/q_5z22SNMXg?rel=0" target="page"> So You Think You Can Dance?</a>
+             </td>
+             <td>
+                <a href="https://www.youtube.com/embed/2x6mRH87P_U?rel=0" target="page">King of The Hill</a> 
+                </td>
+             <td>
+               <a href="https://www.youtube.com/embed/rQtgrow4MY8?rel=0" target="page">Bob's Burgers</a>
+             </td>
+             <td> 
+                 <a href="https://www.youtube.com/embed/HvMvLFN_5bk?rel=0" target="page">Malcom In The Middle</a>
+             </td>
+             <td>
+                <a href="https://www.youtube.com/embed/tdKjI_5F4rw?rel=0" target="page">American Idol</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/rGQkLXIey4Y?rel=0" target="page">The Simpsons</a>
+               </td>
+            <td>
+               <a href="https://www.youtube.com/embed/q_5z22SNMXg?rel=0" target="page"> So You Think You Can Dance?</a>
+            </td>
+            <td>
+               <a href="https://www.youtube.com/embed/2x6mRH87P_U?rel=0" target="page">King of The Hill</a> 
+               </td>
+            <td>
+              <a href="https://www.youtube.com/embed/rQtgrow4MY8?rel=0" target="page">Bob's Burgers</a>
+            </td>
+            <td> 
+                <a href="https://www.youtube.com/embed/HvMvLFN_5bk?rel=0" target="page">Malcom In The Middle</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/l1_VupbHIDA?rel=0" target="page">Fixxer Upper</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/dg2h2riKPmE?rel=0" target="page">My Lottery Dream House</a>
+            </td>
+         </tr>
+         <tr>
+            <th>The Animal Planet</th>
+             <td>
+                 <a href="https://www.youtube.com/embed/tdKjI_5F4rw?rel=0" target="page">American Idol</a>
+             </td>
+             <td>
+                 <a href="https://www.youtube.com/embed/rGQkLXIey4Y?rel=0" target="page">The Simpsons</a>
+                </td>
+             <td>
+                <a href="https://www.youtube.com/embed/q_5z22SNMXg?rel=0" target="page"> So You Think You Can Dance?</a>
+             </td>
+             <td>
+                <a href="https://www.youtube.com/embed/2x6mRH87P_U?rel=0" target="page">King of The Hill</a> 
+                </td>
+             <td>
+               <a href="https://www.youtube.com/embed/rQtgrow4MY8?rel=0" target="page">Bob's Burgers</a>
+             </td>
+             <td> 
+                 <a href="https://www.youtube.com/embed/HvMvLFN_5bk?rel=0" target="page">Malcom In The Middle</a>
+             </td>
+             <td>
+                <a href="https://www.youtube.com/embed/tdKjI_5F4rw?rel=0" target="page">American Idol</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/rGQkLXIey4Y?rel=0" target="page">The Simpsons</a>
+               </td>
+            <td>
+               <a href="https://www.youtube.com/embed/q_5z22SNMXg?rel=0" target="page"> So You Think You Can Dance?</a>
+            </td>
+            <td>
+               <a href="https://www.youtube.com/embed/2x6mRH87P_U?rel=0" target="page">King of The Hill</a> 
+               </td>
+            <td>
+              <a href="https://www.youtube.com/embed/rQtgrow4MY8?rel=0" target="page">Bob's Burgers</a>
+            </td>
+            <td> 
+                <a href="https://www.youtube.com/embed/HvMvLFN_5bk?rel=0" target="page">Malcom In The Middle</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/l1_VupbHIDA?rel=0" target="page">Fixxer Upper</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/embed/dg2h2riKPmE?rel=0" target="page">My Lottery Dream House</a>
+            </td>
+         </tr>
+    </table>
+       
+     
+
+
+      <script src="script.js"></script>
+</body>
+</html>

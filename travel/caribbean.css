@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  nav {
+    z-index: 500;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 200px;
+    background-color: #222;
+  }
+  
+  nav .logo {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-decoration: none;
+    transform: translateX(-80px);
+  }
+  
+  
+  nav .navigation .navigation-items a {
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+  }
+  
+
+  nav .navigation-items a:hover {
+    color: #ccc;
+  }
+ 
+  
+  section {
+    padding: 100px;
+  }
+  
+  .home {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #2696E9;
+  }
+
+  div:nth-of-type(1) {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('https://images.unsplash.com/photo-1627512729059-fb322f8436f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=802&q=80');
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+  }
+
+  div:nth-of-type(2) {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('https://images.pexels.com/photos/35637/alaska-glacier-ice-mountains.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+  }
+
+  div:nth-of-type(3) {
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('https://images.pexels.com/photos/3411135/pexels-photo-3411135.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+  }
+
+  div:nth-of-type(4) {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('https://images.pexels.com/photos/3936144/pexels-photo-3936144.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+  }
+
+  /*.car{
+    background-size: cover;
+    z-index: 100;
+}*/
+  
+  
+  .content {
+    z-index: 888;
+    color: #fff;
+    width: 70%;
+    margin-top: 50px;
+    display: none;
+  }
+  
+   .content.active{
+    display: block;
+  }
+  
+   .content h1{
+    font-size: 4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 75px;
+    margin-bottom: 40px;
+  }
+  
+   .content p {
+    margin-bottom: 65px;
+  }
+
+   .content:nth-of-type(even) {
+    padding: 10px 100px;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+  }
+
+  
+   .content a {
+    background: #fff;
+    padding: 15px 35px;
+    color: #1680AC;
+    font-size: 1.1em;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 2px;
+  }
+  
+   .media-icons {
+    z-index: 888;
+    position: absolute;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s ease;
+  }
+  
+   .media-icons a {
+    color: #fff;
+    font-size: 1.6em;
+    transition: 0.3s ease;
+    margin: 15px 0px;
+  } 
+  
+   .media-icons a:hover {
+    transform: scale(1.3);
+  }
+  
+
+  .slider-navigation {
+    z-index: 888;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(80px, 75px);
+  }
+  
+  .slider-navigation .nav-btn {
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+    margin: 0px 25px;
+    transition: 0.3s ease;
+  }
+  
+  .slider-navigation .nav-btn.active {
+    background: #2696E9;
+  }
+  
+
+  .slider-navigation .nav-btn:hover {
+    transform: scale(1.2);
+  }
+
+  /*.home video {
+    z-index: 000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  } */
+  
+
+  .video-slide {
+    position: absolute;
+    width: 100%;
+    clip-path: circle(0% at 0 50%);
+  }
+  
+  .video-slide.active {
+    clip-path: circle(150% at 0 50%);
+    transition: 2s ease;
+    transition-property: clip-path;
+    background-size: cover;
+  }
+
+  
+  @media (max-width: 768px) {
+   
+    .content h1 {
+      margin-top: -60px;
+    }
+    
+
+    .slider-navigation {
+      margin-top: 10px;
+      margin-right: 250px;
+    }
+
+    .navigation-items {
+      color: #1680AC;
+      font-size: 12px;
+      display: flex;
+    }
+
+   
+  }
+
+  @media (max-width: 500px) {
+      .content h1 {
+        font-size: 2.8rem;
+        transform: translateX(10px);
+      }
+
+      .home {
+        display: block;
+        height: 100%;
+      }
+
+      body {
+        overflow-x: hidden;
+      }
+
+
+      .content p {
+        display: block;
+        width: 100%;
+        transform: translateX(10px);
+      }
+
+      .content a {
+        transform: translateX(10px);
+      }
+
+    }
+
+
+ 

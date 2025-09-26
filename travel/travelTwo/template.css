@@ -1,0 +1,390 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.logo {
+  z-index: 20;
+  padding: 20px 40px;
+  font-size: 20px;
+  background-color: #4cc5fb;
+  color: #fff;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+.fa {
+  color: #fff;
+  z-index: 200;
+}
+
+/* Gray Section */
+.top {
+    background-color: rgb(247, 238, 238);
+    width: 1350px;
+    height: 400px;
+}
+
+/* small pictures */ 
+
+.top-bottom {
+  width: 350px;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+} 
+
+.top-bottom img {
+  width: 100%;
+  height: 100%;
+  border: 10px solid hsl(214, 85%, 48%);
+  border-radius: 25px;
+} 
+
+.big {
+   transform: scale(1.5) translateX(-30px);
+   animation: fadeIn 5s ease-in 1 0.3s forwards;
+   opacity: 0;
+}
+
+.firstPic {
+    opacity: 0;
+    margin-left: 90px;
+    transform: translate(-20px,35px);
+    animation: fadeIn 5s ease-in 1 2s forwards;
+}
+
+.secondPic {
+    opacity: 0;
+    animation: fadeIn 5s ease-in 2.5s 1 forwards;
+    transform: translateX(-20px);
+}
+
+.third {
+    opacity: 0;
+    transform: translate(210px, -130px);
+    animation: fadeIn 5s ease-in 3.5s 1 forwards;
+  }
+
+.fourthPic {
+   opacity: 0; 
+   transform: translate(300px, -590px);
+   animation: fadeIn 5s ease-in 4.5s 1 forwards;
+  }
+
+  @keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.top-bottom h4 {
+  font-size: 23px;
+  transform: translate(705px, -880px);
+}
+
+  .para {
+    position: absolute;
+    top: 15%;
+    left: 195%;
+    width: 60%;
+    height: 500px;
+    color: #000;
+    line-height: 1.5;
+    font-size: 19px;
+  }
+
+.hiddenMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    margin: 0;
+    transform: translateY(-100%);
+    transition:  all 2s linear;
+    z-index: 100;
+    opacity: 0;
+}
+
+.hiddenMenu.active {
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 2s;
+}
+
+.hiddenMenu ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 90px;
+}
+
+.hiddenMenu ul li {
+  list-style: none;
+  font-size: 40px;
+  padding: 20px 10px;
+  z-index: 10;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.hiddenMenu ul li a {
+  color: cornflowerblue;
+  text-decoration: none;
+}
+
+/*
+.hiddenMenu ul li a {
+   display: block;
+   font-size: 20px;
+   padding: 20px 10px;
+   color: cornflowerblue;
+   z-index: 10;
+   font-weight: 800;
+   text-transform: uppercase;
+} */
+
+.hiddenMenu ul li a:hover {
+     opacity: .7; /*need to fix*/
+}
+
+
+.names {
+    font-size: 200px;
+  }
+  
+  .name {
+    color: #fff;
+    font-family: Work Sans;
+    font-weight: light;
+    position: absolute;
+    top: -75px;
+    left: 300px;
+  }
+  
+  
+  .name li {
+    font-size: 50px;
+    text-shadow: 1px 1px 5px hsl(192, 79%, 42%),
+                 3px 3px 5px #333;
+    transition: 2s;
+    animation: lettersOne 3s ease-in 16s forwards;
+    list-style: none;
+    display: inline;
+  }
+  
+   .names li {
+    opacity: 0;
+  }
+  
+  
+  @keyframes lettersOne {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  
+  
+  ul li:nth-child(1) {
+    animation-delay: 5s;
+  }
+  
+  ul li:nth-child(2) {
+    animation-delay: 5.4s;
+  }
+  
+  ul li:nth-child(3) {
+    animation-delay: 5.8s;
+  }
+  
+  ul li:nth-child(4) {
+    animation-delay: 6.2s;
+  }
+  
+  ul li:nth-child(5) {
+    animation-delay: 6.6s;
+  }
+  
+  ul li:nth-child(6) {
+    animation-delay: 7.0s;
+  }
+  
+  ul li:nth-child(7) {
+    animation-delay: 7.4s;
+  }
+  
+  /*.name ul {
+      position: absolute;
+      top: 10px;
+      left: 800px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 10;
+  }
+  
+  .name li {
+      list-style: none;
+      font-size: 30px;
+      margin: 15px;
+  }
+  
+  .name  li a {
+      color: #fff;
+      font-weight: bolder;
+      text-decoration: none;
+  }
+  
+  .name li a:hover {
+      opacity: 0.7;
+  }
+  
+  li span {
+    color: #fff;
+  }  */
+  
+
+.bottomLeft {
+    background-color: #4cc5fb;
+    width: 50%;
+    height: 850px;
+    position: absolute;
+    top: 60%;
+    left: o;
+    z-index: -1;
+}
+
+.bottomRight {
+  background-color: hwb(199 6% 19%);
+  width: 50%;
+  height: 850px;
+  position: absolute;
+  top: 60%;
+  right: 0;
+  z-index: -1;
+}
+
+
+h1 {
+    position: absolute;
+    top: 5%;
+    left: 500px;
+    color: rgb(13, 155, 173);
+    font-weight: bolder;
+}
+
+
+h3 {
+    font-size: 40px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: rgb(238, 238, 156);
+    margin-top: 0px;
+    margin-left: 90px;
+}
+
+
+.big-text {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 55px;
+} 
+
+.smalls {
+  margin: 0px 5px;
+  color: rgb(238, 238, 156);
+  font-size: 13px;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+
+.bottomLeft h2 {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  z-index: 100;
+  color: rgb(251, 252, 157);
+  text-transform: uppercase;
+  font-size: 35px;
+}
+
+
+.bottomLeft p {
+  color: #fff;
+  margin-top: 700px;
+  margin-left: 30px;
+  font-size: 16px;
+  line-height: 1.5;
+  width: 80%;
+}
+
+.bottomLeft a {
+  background-color: #fff;
+  color: blue;
+  font-weight: bolder;
+  padding: 10px 40px;
+  text-decoration: none;
+  position: absolute;
+  bottom: 10px;
+  left: 30%;
+  transition: padding 0.3s ease-in;
+}
+
+.bottomLeft img {
+  width: 35%;
+  transform: rotateY(180deg);
+  position: absolute;
+  bottom: 30%;
+  left: 55%;
+}
+
+.bottomLeft a:hover {
+  padding: 10px 50px;
+}
+
+
+.bottomRight ul {
+  padding: 10px 50px;
+  display: block;
+  color: #fff;
+  border: 3px solid #fff;
+  z-index: 10;
+  position: absolute;
+  top: 70%;
+  left: 20%;
+}
+
+.bottomRight ul li {
+  font-size: 16px;
+}
+
+.bottomRight h2 {
+    display: inline-block;
+    font-size: 40px;
+    background-color: #fff;
+    color: #4cc5fb;
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding: 2px;
+    margin-top: 450px;
+    margin-left: 30px;
+}
+
+/* https://designbundles.net/aam360/434654-travel-agency-flyer-template */ 
+
+/* https://designbundles.net/aam360/434654-travel-agency-flyer-template */
